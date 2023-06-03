@@ -3,11 +3,13 @@
    --light-bar-clr: #59636d;
    --light-bg: #eef0f2;
    --light: #F9F9F9;
-   --dark: #342E37;
+   --dark: #342E37;   
    --grey: #ececec;
    --shdw-bottom: #9aa0b9;
    --grad-shdw-1: rgba(187,187,187,1);
    --grad-shdw-2: rgba(187,187,187,0);
+
+   --bs-modal-color: #000;
 
    --mada: 'Mada-Regular', sans-serif;
 }
@@ -21,6 +23,8 @@ body.dark {
    --shdw-bottom: #214321;
    --grad-shdw-1: rgb(10 10 10);
    --grad-shdw-2: rgb(40 40 40 / 0%);
+
+   --bs-modal-color: #fff;
 }
 
 /* NAVHEADER */
