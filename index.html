@@ -1150,7 +1150,10 @@ select.form-control.form-dark-light[multiple] {
 .custom-switch.custom-switch-off-danger .custom-control-input~.custom-control-label::after {
     background-color: #7c151f;
 }
-
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
 .selectize-input, .selectize-control.single .selectize-input.input-active,
 .selectize-input, .selectize-input.full,
 .selectize-control.single .selectize-input,
