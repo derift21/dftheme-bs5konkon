@@ -37,9 +37,10 @@
                   display: flex;
                   align-items: flex-start;
                   padding: 0 10px;
+                  transform: scale(.9);
               ">
                      <div class="pro-sidebar-logo">
-                       <div><i class="zmdi zmdi-book rotate-n-15 applogo" style="font-size: 50px;line-height: 1;padding-top: 4px;"></i></div>                       
+                       <div><i class="zmdi zmdi-book rotate-n-15 applogo" style="font-size: 50px;line-height: 1;padding-top: 4px;color: var(--dark);"></i></div>                       
                      </div>
                      <h5 style="margin: 0 10px;
                      padding-top: 0px;">
@@ -117,7 +118,7 @@
 
             <div class="be-right-navbar">
                <ul class="nav navbar-nav menu-end be-icons-nav">
-                  <button id="theme-toggle" aria-label="Mode gelap" class="soundswtch">
+                  <button id="theme-toggle" aria-label="Mode gelap" class="soundswtch d-none d-sm-block">
                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill-rule="evenodd" viewBox="0 0 512 512" width="1em" height="1em">
                          <path class="ray-ring" d="m7 256 73-73V80h103l73-73 73 73h103v103l73 73-73 73v103H329l-73 73-73-73H80V329L7 256zm249-144a144 144 0 1 1 0 288 144 144 0 0 1 0-288z"></path>
                          <circle cx="256" cy="256" r="112"></circle>
@@ -501,7 +502,7 @@ document.onload = setThemePreference();
                      <ul class="sidebar-elements">
                         <!-- <li class="divider">Studio KonKon: Theme 2020</li> -->
                         <li>
-                           <a href="#"><i class="icon zmdi zmdi-home"></i><span class="text">Dashboard</span></a>
+                           <a href="./"><i class="icon zmdi zmdi-home"></i><span class="text">Dashboard</span></a>
                         </li>
                         <li class="divider">MASTER</li>                        
                         <li class="parent">
@@ -648,7 +649,7 @@ document.onload = setThemePreference();
          </section>           
 
          <!-- Information #1 //-->
-         <section class="bg-light border border-1 py-5">
+         <section class="bg-light border border-1 py-2">
             <div class="container">
                <div class="row flex-row-reverse g-5 align-items-center justify-content-center">
                   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -1373,7 +1374,7 @@ input:-webkit-autofill,
                  <div class="profile-buttons-div">
                    <div class="profile-img-input" id="profile-img-input">
                      <label class="button" id="change-photo-label" for="change-photo" style="display: flex;justify-content: center;align-items: center;grid-gap: 5px;">
-                       <i class="fad fa-image"></i>Pilih foto </label>
+                       <i class="zmdi zmdi-image"></i>Pilih foto </label>
                      <input id="change-photo" name="img" type="file" style="display: none" accept="image/*">
                    </div>
                    <div class="profile-img-confirm" id="profile-img-confirm" style="display: none">

@@ -14,6 +14,11 @@
    --c-select: #e4edfc;
 
    --mada: 'Mada-Regular', sans-serif;
+
+   --c-block: #fff;
+   --c-line: #e4edfc;
+   --r3x: 12px;  
+   --wh-scrollbar: 10px;   
 }
 body.dark {
    --light-nav: #2d2e33;
@@ -29,8 +34,30 @@ body.dark {
    --bs-modal-clr: #fff;
    --c-text: #bcbfc6;
    --c-select: #595d66;
+
+   --c-block: #363940;
+   --c-line: #42454d;
+}
+*::-webkit-scrollbar {
+   width: var(--wh-scrollbar)
 }
 
+*::-webkit-scrollbar-button,*::-webkit-scrollbar-corner,*::-webkit-resizer {
+   display: none
+}
+
+*::-webkit-scrollbar:horizontal {
+   height: var(--wh-scrollbar)
+}
+
+*::-webkit-scrollbar-track,*::-webkit-scrollbar:horizontal {
+   background-color: var(--c-block)
+}
+
+*::-webkit-scrollbar-thumb,*::-webkit-scrollbar:horizontal {
+   border-radius: var(--r3x);
+   background-color: var(--c-line)
+}
 /* NAVHEADER */
 body.bg-light {
    background-color: var(--light-bg) !important;
