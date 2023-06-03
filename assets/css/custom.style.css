@@ -9,6 +9,8 @@
    --grad-shdw-1: rgba(187,187,187,1);
    --grad-shdw-2: rgba(253, 245, 245, 0);
 
+   --sk-sidebar-divider-color: #6c757d;
+   --sk-sidebar-divider-bg: #dee2e6;
    --bs-modal-clr: #000;
    --c-text: #1b1f24;
    --c-select: #e4edfc;
@@ -31,6 +33,8 @@ body.dark {
    --grad-shdw-1: rgb(70, 70, 70);
    --grad-shdw-2: rgb(40 40 40 / 0%);
 
+   --sk-sidebar-divider-color: #868686;
+   --sk-sidebar-divider-bg: #545555;
    --bs-modal-clr: #fff;
    --c-text: #bcbfc6;
    --c-select: #595d66;
