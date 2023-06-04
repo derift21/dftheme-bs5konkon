@@ -90,6 +90,28 @@ body.bg-light {
 .be-left-sidebar .progress-widget .progress-data {
    color: var(--light-bar-clr);
 }
+
+.dropdown-menu {
+   --bs-dropdown-color: var(--bs-modal-clr);
+   --bs-dropdown-bg: var(--light-nav);
+}
+.be-user-nav > li.dropdown .dropdown-menu {
+   border: 1px solid var(--light-nav);
+}
+.be-user-nav .skk-nvl,.be-user-nav .skk-nva {
+   /* border-top: 1px solid var(--sk-sidebar-divider-bg); */
+   border-top: 1px solid var(--light-nav);
+}
+.be-user-nav .skk-nv-btn {
+   border-top: 1px solid var(--sk-sidebar-divider-bg);
+   border-bottom: 1px solid var(--light-nav);
+}
+.be-user-nav .skk-nvh-name,
+.be-user-nav .skk-nvl > .skk-nvl-item .skk-nvli-label,
+.be-user-nav .skk-nva-email, .be-user-nav .skk-nva-name,
+.be-user-nav .skk-nva-email {
+   color: var(--dark);
+}
 /* NAVHEADER */
 
 /* SIDEBAR */
