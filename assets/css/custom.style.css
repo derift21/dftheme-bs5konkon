@@ -983,4 +983,25 @@ input:-webkit-autofill:focus {
     height: 40px;
     background-color: rgb(128 229 131 / 50%);
 }
+
+/* STATUS ONLINE */
+.status { padding: 3px 0px; display: inline-block; }
+.status:before {
+  content:'';
+  width: 12px;
+  height: 12px;
+  border-radius:50%;
+  display:inline-block;
+  margin-right: 5px;
+}
+.status.Online:before {
+  content:'';
+  background-color: green;
+}
+.status.Away:before {
+  content:'';
+  background-color: orange;
+}
+/* STATUS ONLINE */
+
 /* OTHER */

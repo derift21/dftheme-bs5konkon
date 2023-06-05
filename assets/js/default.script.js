@@ -390,6 +390,22 @@ var cursor = {
 cursor.init();
 // CURSOR
 
+// PAGE TIMELOAD
+  //calculate the time before calling the function in window.onload
+  var beforeload = (new Date()).getTime();
+
+  function getPageLoadTime() {
+    //calculate the current time in afterload
+    var afterload = (new Date()).getTime();
+    // now use the beforeload and afterload to calculate the seconds
+    seconds = (afterload - beforeload) / 1000;
+
+    a=document.getElementsByTagName('HTML')[0].outerHTML;b=a.length/1024;c=Math.round(b);
+    // Place the seconds in the innerHTML to show the results
+    $("#load_time").text(' ' + seconds + 's (' + c + 'kb)');
+  }
+  window.onload = getPageLoadTime;
+
 // ----- Testing our code #1
 // $(".mobile-toggle-nav").click(function() {
 //    $(".mobile-toggle-nav").toggleClass("is-active")
