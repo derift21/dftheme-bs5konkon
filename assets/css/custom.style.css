@@ -232,6 +232,28 @@ body.bg-light {
    border: solid 2px transparent;
    border-radius: 6px;
 }
+.sidebar-elements li.open > ul {   
+   position: relative;
+   padding: 0 0 0 2.2rem;
+   animation: flipInX 0.5s;
+}
+.sidebar-elements .parent.open ul:before {
+   content: '';
+   height: 100%;
+   opacity: 1;
+   width: 3px;
+   background: rgba(var(--sk-sidebar-color-rgb), 1);
+   position: absolute;
+   left: 35px;
+   top: 0;
+   border-radius: 15px;
+}
+.be-left-sidebar .sidebar-elements li.parent > a:after {
+   transition: transform 300ms;
+}
+.be-left-sidebar .sidebar-elements li.parent.open > a:after {
+   transform: rotate(-180deg);
+}
 /* SIDEBAR */
 
 /* DASHBOARD */
@@ -807,6 +829,105 @@ input:-webkit-autofill:focus {
       margin-right: 0;
 }
 /* MODAL & FORM */
+
+/* HAMBURGER */
+.hamburger {
+   padding: 0;
+   display: inline-block;
+   cursor: pointer;
+   transition-property: opacity,filter;
+   transition-duration: .15s;
+   transition-timing-function: linear;
+   font: inherit;
+   color: inherit;
+   text-transform: none;
+   background-color: transparent;
+   border: 0;
+   margin: 0;
+   overflow: visible
+}
+
+.hamburger:hover {
+   opacity: .7
+}
+
+.hamburger.is-active:hover {
+   opacity: .7
+}
+
+.hamburger.is-active .hamburger-inner,.hamburger.is-active .hamburger-inner::before,.hamburger.is-active .hamburger-inner::after {
+   background-color: #3f6ad8
+}
+
+.hamburger-box {
+   width: 24px;
+   height: 13px;
+   display: inline-block;
+   position: relative;
+   transform: scale(1.2);
+}
+
+.hamburger-inner {
+   display: block;
+   top: 50%;
+   margin-top: -1px
+}
+
+.hamburger-inner,.hamburger-inner::before,.hamburger-inner::after {
+   width: 24px;
+   height: 2px;
+   background-color: #3f6ad8;
+   border-radius: 10px;
+   position: absolute;
+   transition-property: transform;
+   transition-duration: .15s;
+   transition-timing-function: ease
+}
+
+.hamburger-inner::before,.hamburger-inner::after {
+   content: "";
+   display: block
+}
+
+.hamburger-inner::before {
+   top: -6px
+}
+
+.hamburger-inner::after {
+   bottom: -6px
+}
+
+.hamburger--elastic .hamburger-inner {
+   top: 1px;
+   transition-duration: .275s;
+   transition-timing-function: cubic-bezier(.68,-.55,.265,1.55)
+}
+
+.hamburger--elastic .hamburger-inner::before {
+   top: 6px;
+   transition: opacity .125s .275s ease
+}
+
+.hamburger--elastic .hamburger-inner::after {
+   top: 12px;
+   transition: transform .275s cubic-bezier(.68,-.55,.265,1.55)
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+   transform: translate3d(0,6px,0) rotate(135deg);
+   transition-delay: .075s
+}
+
+.hamburger--elastic.is-active .hamburger-inner::before {
+   transition-delay: 0s;
+   opacity: 0
+}
+
+.hamburger--elastic.is-active .hamburger-inner::after {
+   transform: translate3d(0,-12px,0) rotate(-270deg);
+   transition-delay: .075s
+}
+/* HAMBURGER */
 
 /* OTHER */
 .skk-blossom {

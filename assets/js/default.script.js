@@ -79,7 +79,7 @@ console.clear();
       // to prevent sidebar from closing but also prevent
       // toggles from responing twice (i.e: immediate open/close)
       if(this.classes.component == "") {
-         this.classes.component = "skk-sidebar-" + uid();
+         this.classes.component = "skk-sidebar-" + uid();         
       }
 
       this.sidebar.classList.add(this.classes.component);
@@ -133,16 +133,20 @@ console.clear();
       ) {
          this.sidebar.classList.remove(this.classes.open);
          this.isOpen = false;
+         document.querySelector('#left-sidebar-toggle').classList.remove("is-active")
       }
    }
 
    function open() {
       this.sidebar.classList.add(this.classes.open);
       this.isOpen = true;
+      document.querySelector('#left-sidebar-toggle').classList.add("is-active")
    }
 
    function toggle(event) {
       this.isOpen = this.sidebar.classList.toggle(this.classes.open);
+      // document.querySelector('#left-sidebar-toggle').toggle("is-active");
+      $('#left-sidebar-toggle').toggleClass("is-active");
       
       // Prevent toggle from scrolling page to top
       event.stopPropagation();
@@ -187,7 +191,7 @@ console.clear();
           );
 
       itemsOpen.forEach(this.menuClose, this);
-      $subMenu && $li.classList.add(this.classes.open);
+      $subMenu && $li.classList.add(this.classes.open);      
    }
 
    function menuClose($li) {
@@ -259,6 +263,9 @@ console.clear();
 
 
 // ----- Testing our code #1
+// $(".mobile-toggle-nav").click(function() {
+//    $(".mobile-toggle-nav").toggleClass("is-active")
+// });
 
 var mySidebar = new Sidebar("#left-sidebar");
 mySidebar.createToggle("#left-sidebar-toggle");
