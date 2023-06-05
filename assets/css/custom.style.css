@@ -960,4 +960,27 @@ input:-webkit-autofill:focus {
    text-overflow: ellipsis;
    white-space: nowrap;
 }
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #3fd402;
+}
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(128 229 131 / 50%);
+}
 /* OTHER */
