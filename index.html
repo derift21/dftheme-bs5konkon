@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,27 @@
 
     <!-- <link href="https://cdn.jsdelivr.net/gh/StudioKonKon/bootstrap-konkon@1.5.5-beta/dist/css/studio-konkon.min.css" rel="stylesheet" />
               <link href="https://cdn.jsdelivr.net/gh/StudioKonKon/bootstrap-konkon@1.5.5-beta/dist/css/studio-konkon-app.min.css" rel="stylesheet" /> -->
-    <link href="assets/css/studio-konkon.css" rel="stylesheet"/>
-    <link href="assets/css/studio-konkon-app.css" rel="stylesheet"/>
+    <link href="assets/css/studio-konkon.css" rel="stylesheet" />
+    <link href="assets/css/studio-konkon-app.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/studio-konkon-ui.css">
+    <link rel="stylesheet" href="assets/css/studio-konkon-modals.css">
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Selectize js -->
     <script src="assets/src/selectize.js/js/standalone/selectize.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="assets/src/selectize.js/css/selectize.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/src/selectize.js/css/selectize.bootstrap4.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/src/selectize.js/css/selectize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/src/selectize.js/css/selectize.bootstrap4.css" />
 
-    <link href="assets/fonts/Material-Design-Iconic/css/material-design-iconic-font.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="assets/fonts/Material-Design-Iconic/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/custom.style.css">
 
 </head>
+
 <body class="bg-light">
-    <div class="be-wrapper be-offcanvas-menu be-fixed-sidebar" style="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
+    <div class="be-wrapper be-offcanvas-menu be-fixed-sidebar"
+        style="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
 
         <nav class="navbar navbar-expand fixed-top be-top-header">
             <div class="container-fluid">
@@ -34,27 +39,18 @@
                     <a class="nav-link be-toggle-left-sidebar" href="#" id="left-sidebar-toggle">
                         <span class="icon zmdi zmdi-menu"></span>
                     </a>
-                    <a class="navbar-brand" href="#">
-                        <div class="sidebar-header" style="
-                                                                                  display: flex;
-                                                                                  align-items: flex-start;
-                                                                                  padding: 0 10px;
-                                                                                  transform: scale(.9);
-                                                                              ">
+                    <a class="xnavbar-brand" href="#">
+                        <div class="sidebar-header">
                             <div class="pro-sidebar-logo">
                                 <div>
-                                    <i class="zmdi zmdi-book rotate-n-15 applogo" style="font-size: 50px;line-height: 1;padding-top: 4px;color: var(--dark);"></i>
+                                    <i class="zmdi zmdi-book rotate-n-15 applogo"></i>
                                 </div>
                             </div>
-                            <h5 style="margin: 0 10px;
-                                                                                             padding-top: 0px;">
-                                <a
-                                    href="" class="flex-wrap-center sidebar-logo">
+                            <h5 style="margin: 0 10px; padding-top: 0px;">
+                                <a href="" class="flex-wrap-center sidebar-logo">
                                     <!-- <i class="fad fa-book-user rotate-n-15 applogo"></i> -->
-                                    <div class="center" style="width: 100%;
-                                                                                                                 display: flex;
-                                                                                                                 flex-direction: column;
-                                                                                                                 align-items: center;">
+                                    <div class="center"
+                                        style="width: 100%;display: flex;flex-direction: column;align-items: center;">
                                         <h5>
                                             <div class="desclogo">SIPD
                                                 <i class="zmdi zmdi-graduation-cap" style="font-size: 35px!important;margin-right: 2px;"></i>S
@@ -67,57 +63,6 @@
                                     </div>
                                 </a>
                             </h5>
-                            <style>
-                                .rotate-n-15 {
-                                    transform: rotate(-15deg);
-                                }
-                                .flex-wrap-center {
-                                    display: flex;
-                                    align-items: center;
-                                    text-align: center;
-                                    justify-content: center;
-                                    width: 100%;
-                                }
-                                .center {
-                                    text-align: center;
-                                }
-                                .sidebar-header .sidebar-logo {
-                                    grid-gap: 20px;
-                                }
-                                .sidebar-header .sidebar-logo .applogo {
-                                    font-size: 45px;
-                                    line-height: 1;
-                                    padding-top: 8px;
-                                }
-                                .sidebar-header .sidebar-logo h5 {
-                                    font-size: 30px;
-                                    margin: 0;
-                                    color: var(--dark);
-                                }
-                                .sidebar-header .sidebar-logo p {
-                                    margin: 0;
-
-                                    font-size: 9px;
-                                    letter-spacing: 4.5px;
-                                    text-transform: uppercase;
-                                    background: #34495e;
-                                    font-weight: 400;
-                                    color: #fff;
-                                    width: max-content;
-                                    opacity: 0.8;
-                                    border-radius: 25px;
-                                    padding: 3px 2px 5px 8px;
-                                }
-                                .sidebar-header .sidebar-logo .desclogo {
-                                    line-height: 1;
-                                    font-family: sans-serif;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    font-weight: bold;
-                                    letter-spacing: 2px;
-                                }
-                            </style>
                         </div>
                     </a>
                 </div>
@@ -127,8 +72,11 @@
                 <div class="be-right-navbar">
                     <ul class="nav navbar-nav menu-end be-icons-nav">
                         <button id="theme-toggle" aria-label="Mode gelap" class="soundswtch d-none d-sm-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill-rule="evenodd" viewbox="0 0 512 512" width="1em" height="1em">
-                                <path class="ray-ring" d="m7 256 73-73V80h103l73-73 73 73h103v103l73 73-73 73v103H329l-73 73-73-73H80V329L7 256zm249-144a144 144 0 1 1 0 288 144 144 0 0 1 0-288z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill-rule="evenodd"
+                                viewbox="0 0 512 512" width="1em" height="1em">
+                                <path class="ray-ring"
+                                    d="m7 256 73-73V80h103l73-73 73 73h103v103l73 73-73 73v103H329l-73 73-73-73H80V329L7 256zm249-144a144 144 0 1 1 0 288 144 144 0 0 1 0-288z">
+                                </path>
                                 <circle cx="256" cy="256" r="112"></circle>
                             </svg>
                         </button>
@@ -315,7 +263,9 @@
                                                                      </div>
                                                                   </li> -->
 
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle d-none d-sm-block" href="#" id="user_n_messages_bell" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle d-none d-sm-block" href="#"
+                                id="user_n_messages_bell" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                role="button" aria-expanded="false">
                                 <span class="icon zmdi zmdi-notifications"></span>
                                 <span class="indicator"></span>
                             </a>
@@ -340,12 +290,15 @@
                                             <a href="#">
                                                 <div class="skk-nli-new"></div>
                                                 <div class="skk-nli-img">
-                                                    <img src="https://via.placeholder.com/256/fe669e/fff.png" alt="Avatar"/>
+                                                    <img src="https://via.placeholder.com/256/fe669e/fff.png"
+                                                        alt="Avatar" />
                                                 </div>
                                                 <div class="skk-nli-text">
                                                     <div class="skk-nli-msg">
                                                         <b>Studio KonKon</b>
-                                                        commented: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                                                        commented: "Sed do eiusmod tempor incididunt ut labore et dolore
+                                                        magna aliqua."
+                                                    </div>
                                                     <div class="skk-nli-metadata">3 days ago</div>
                                                 </div>
                                             </a>
@@ -354,12 +307,14 @@
                                             <a href="#">
                                                 <div class="skk-nli-new"></div>
                                                 <div class="skk-nli-img">
-                                                    <img src="https://via.placeholder.com/256/4285f4/fff.png" alt="Avatar"/>
+                                                    <img src="https://via.placeholder.com/256/4285f4/fff.png"
+                                                        alt="Avatar" />
                                                 </div>
                                                 <div class="skk-nli-text">
                                                     <div class="skk-nli-msg">
                                                         <b>Omnis Iste</b>
-                                                        commented: "Magni dolores eos qui."</div>
+                                                        commented: "Magni dolores eos qui."
+                                                    </div>
                                                     <div class="skk-nli-metadata">5 days ago</div>
                                                 </div>
                                             </a>
@@ -368,12 +323,15 @@
                                             <a href="#">
                                                 <div class="skk-nli-new"></div>
                                                 <div class="skk-nli-img">
-                                                    <img src="https://via.placeholder.com/256/ff9f00/fff.png" alt="Avatar"/>
+                                                    <img src="https://via.placeholder.com/256/ff9f00/fff.png"
+                                                        alt="Avatar" />
                                                 </div>
                                                 <div class="skk-nli-text">
                                                     <div class="skk-nli-msg">
                                                         <b>Mario Santoria</b>
-                                                        commented: "Nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"</div>
+                                                        commented: "Nostrum exercitationem ullam corporis suscipit
+                                                        laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+                                                    </div>
                                                     <div class="skk-nli-metadata">8 days ago</div>
                                                 </div>
                                             </a>
@@ -382,12 +340,15 @@
                                             <a href="#">
                                                 <div class="skk-nli-new"></div>
                                                 <div class="skk-nli-img">
-                                                    <img src="https://via.placeholder.com/256/34a853/fff.png" alt="Avatar"/>
+                                                    <img src="https://via.placeholder.com/256/34a853/fff.png"
+                                                        alt="Avatar" />
                                                 </div>
                                                 <div class="skk-nli-text">
                                                     <div class="skk-nli-msg">
                                                         <b>Serena Chaku</b>
-                                                        commented: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."</div>
+                                                        commented: "Quis autem vel eum iure reprehenderit qui in ea
+                                                        voluptate velit esse quam nihil molestiae consequatur."
+                                                    </div>
                                                     <div class="skk-nli-metadata">14 days ago</div>
                                                 </div>
                                             </a>
@@ -396,12 +357,14 @@
                                             <a href="#">
                                                 <div class="skk-nli-new"></div>
                                                 <div class="skk-nli-img">
-                                                    <img src="https://via.placeholder.com/256/6ba4ff/fff.png" alt="Avatar"/>
+                                                    <img src="https://via.placeholder.com/256/6ba4ff/fff.png"
+                                                        alt="Avatar" />
                                                 </div>
                                                 <div class="skk-nli-text">
                                                     <div class="skk-nli-msg">
                                                         <b>Shinobu KonKon</b>
-                                                        commented: "Qui in ea voluptate velit esse ka?"</div>
+                                                        commented: "Qui in ea voluptate velit esse ka?"
+                                                    </div>
                                                     <div class="skk-nli-metadata">20 days ago</div>
                                                 </div>
                                             </a>
@@ -413,14 +376,16 @@
                     </ul>
                     <ul class="nav navbar-nav menu-end be-user-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
-                                <img id="user_image" src="https://via.placeholder.com/256/fe669e/fff.png" alt="Avatar"/>
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                <img id="user_image" src="https://via.placeholder.com/256/fe669e/fff.png"
+                                    alt="Avatar" />
                                 <span class="user-name">Studio KonKon</span>
                             </a>
                             <div class="dropdown-menu rounded-3 overflow-hidden" role="menu">
                                 <div class="skk-nvh">
                                     <div class="skk-nvh-img">
-                                        <img src="https://via.placeholder.com/256/fe669e/fff.png" alt="Avatar"/>
+                                        <img src="https://via.placeholder.com/256/fe669e/fff.png" alt="Avatar" />
                                     </div>
                                     <div class="skk-nvh-info">
                                         <div class="skk-nvh-name">Studio KonKon</div>
@@ -428,14 +393,14 @@
                                         <!-- <a class="btn btn-rounded btn-secondary" href="#">Manage Your Account</a> -->
                                     </div>
                                 </div>
-                                
+
                                 <ul class="skk-nvl">
                                     <li class="skk-nvl-item">
                                         <a href="#">
                                             <div class="skk-nvli-icon">
                                                 <i class="zmdi zmdi-translate"></i>
                                             </div>
-                                            <div class="skk-nvli-label">Language: English</div>
+                                            <div class="skk-nvli-label">Bahasa: Indonesia</div>
                                             <div class="skk-nvli-subtitle"></div>
                                             <div class="skk-nvli-icon">
                                                 <i class="zmdi zmdi-chevron-right"></i>
@@ -447,31 +412,33 @@
                                             <div class="skk-nvli-icon">
                                                 <i class="zmdi zmdi-globe-alt"></i>
                                             </div>
-                                            <div class="skk-nvli-label">Location: United Kingdom</div>
+                                            <div class="skk-nvli-label">Lokasi: Tidak diketahui</div>
                                             <div class="skk-nvli-subtitle"></div>
                                             <div class="skk-nvli-icon">
                                                 <i class="zmdi zmdi-chevron-right"></i>
                                             </div>
                                         </a>
                                     </li>
+                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label">Tema: Terang</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
                                 </ul>
                                 <div class="skk-nva">
-                                 <a href="#">
-                                     <div class="skk-nva-icon">
-                                         <img src="https://via.placeholder.com/256/4285f4/fff.png" alt="Avatar"/>
-                                     </div>
-                                     <div class="skk-nva-account">
-                                         <div class="skk-nva-name">Studio KonKon</div>
-                                         <div class="skk-nva-email">username@example.com</div>
-                                     </div>
-                                     <div class="skk-nva-check">
-                                         <i class="zmdi zmdi-check"></i>
-                                     </div>
-                                 </a>
-                                 
-                             </div>
+                                    <a href="#">
+                                        <div class="skk-nva-icon">
+                                            <img src="https://via.placeholder.com/256/4285f4/fff.png" alt="Avatar" />
+                                        </div>
+                                        <div class="skk-nva-account">
+                                            <div class="skk-nva-name">Studio KonKon</div>
+                                            <div class="skk-nva-email">username@example.com</div>
+                                        </div>
+                                        <div class="skk-nva-check">
+                                            <i class="zmdi zmdi-check"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
                                 <div class="skk-nv-btn">
-                                    <a class="btn btn-secondary btn-rounded" href="#">Keluar</a>
+                                    <a class="btn btn-secondary btn-rounded" href="#" data-bs-toggle="modal" data-bs-target="#logoutConfirm"><i
+                                            class="zmdi zmdi-close-circle-o"></i> Keluar</a>
                                 </div>
                                 <!-- <div class="skk-nvf">
                                     <a href="#">Privacy Policy</a>
@@ -493,8 +460,7 @@
                     <div class="left-sidebar-scroll">
                         <div class="left-sidebar-content">
 
-                            <ul
-                                class="sidebar-elements">
+                            <ul class="sidebar-elements">
                                 <!-- <li class="divider">Studio KonKon: Theme 2020</li> -->
                                 <li>
                                     <a href="./">
@@ -502,7 +468,7 @@
                                         <span class="text">Dashboard</span>
                                     </a>
                                 </li>
-                                <li class="divider">MASTER</li>
+                                <li style="color: var(--sk-sidebar-divider-color);font-weight: 500;padding: 0.5rem 1.5rem;" class="text-uppercase d-flex align-items-center justify-content-between gap-3">MASTER <i class="icon zmdi zmdi-storage"></i><hr class="flex-fill"></li>
                                 <li class="parent">
                                     <a href="#">
                                         <i class="icon zmdi zmdi-storage"></i>
@@ -510,7 +476,7 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#">
+                                            <a href="pages/masjabatan.html">
                                                 <span class="text">Jabatan</span>
                                             </a>
                                         </li>
@@ -533,12 +499,12 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#">
+                                            <a href="pages/masmember.html">
                                                 <span class="text">Manajemen Member</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="pages/masmember-detail.html">
                                                 <span class="text">Profil Member</span>
                                             </a>
                                         </li>
@@ -551,12 +517,12 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="#">
+                                            <a href="pages/presensi.html">
                                                 <span class="text">Presensi</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="pages/cuti.html">
                                                 <span class="text">Cuti</span>
                                             </a>
                                         </li>
@@ -564,21 +530,21 @@
                                 </li>
                                 <li class="divider">bantuan &amp; Dukungan</li>
                                 <li>
-                                    <a href="#">
+                                    <a href="pages/pengaturan.html">
                                         <i class="icon zmdi zmdi-settings"></i>
                                         <span class="text">Pengaturan</span>
                                         <span class="badge text-bg-konkon">BETA</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="pages/about.html">
                                         <i class="icon zmdi zmdi-info"></i>
                                         <span class="text">Tentang</span>
                                     </a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#logoutConfirm">
                                         <i class="icon zmdi zmdi-layers"></i>
                                         <span class="text">Keluar</span>
                                     </a>
@@ -601,33 +567,11 @@
         </div>
 
         <div class="be-content flex-fill pb-4">
-
-
-            <style type="text/css">
-                .skk-blossom {
-                    --skk-size: 10rem;
-                    --skk-position: 2.5rem;
-                    --skk-left-top: calc(0% +(-1 * var(--skk-position))) calc(100% +(-1 * var(--skk-position)));
-                    --skk-left-bottom: calc(0% +(-1 * var(--skk-position))) calc(100% + var(--skk-position));
-                    --skk-right-top: calc(100% + var(--skk-position)) calc(100% +(-1 * var(--skk-position)));
-                    --skk-right-bottom: calc(100% + var(--skk-position)) calc(100% + var(--skk-position));
-                    background-image: url("/images/svg/blossom-konkon.svg");
-                    background-repeat: no-repeat;
-                    background-size: var(--skk-size);
-                    background-position: var(--skk-right-bottom);
-                }
-                .skk-blossom-w {
-                    background-image: url("/images/svg/blossom-konkon-w.svg");
-                }
-                .skk-blossom-b {
-                    background-image: url("/images/svg/blossom-konkon-b.svg");
-                }
-            </style>
-
-
             <!-- Header //-->
-            <header class="homepage-header shadow-sm" style="--skk-header-color:#fe669e;background-image:url('https://ik.imagekit.io/konkon/skk-banner-no-text.jpg');">
-                <div class="homepage-header-content w-100 h-100 d-flex align-items-center" style="--skk-header-brightness:100%;">
+            <header class="homepage-header shadow-sm"
+                style="--skk-header-color:#fe669e;background-image:url('https://ik.imagekit.io/konkon/skk-banner-no-text.jpg');">
+                <div class="homepage-header-content w-100 h-100 d-flex align-items-center"
+                    style="--skk-header-brightness:100%;">
                     <div class="container col-sm-10 col-lg-8 col-xxl-6 py-4 text-center">
                         <h1 class="text-white mb-2 lh-1">Dashboard</h1>
                         <!-- <h2 class="text-white lh-1" lang="ja">スタジオこんこん</h2> -->
@@ -697,13 +641,17 @@
                     <div class="row flex-row-reverse g-5 align-items-center justify-content-center">
                         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                             <ol class="carousel-indicators">
-                                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true"></li>
+                                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                                    aria-current="true"></li>
                                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class=""></li>
                                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class=""></li>
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide">
+                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
+                                        height="400" xmlns="http://www.w3.org/2000/svg"
+                                        preserveaspectratio="xMidYMid slice" focusable="false" role="img"
+                                        aria-label="Placeholder: First slide">
                                         <title>Placeholder</title>
                                         <rect width="100%" height="100%" fill="#777"></rect>
                                         <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
@@ -714,7 +662,10 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide">
+                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
+                                        height="400" xmlns="http://www.w3.org/2000/svg"
+                                        preserveaspectratio="xMidYMid slice" focusable="false" role="img"
+                                        aria-label="Placeholder: Second slide">
                                         <title>Placeholder</title>
                                         <rect width="100%" height="100%" fill="#666"></rect>
                                         <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
@@ -725,7 +676,10 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide">
+                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
+                                        height="400" xmlns="http://www.w3.org/2000/svg"
+                                        preserveaspectratio="xMidYMid slice" focusable="false" role="img"
+                                        aria-label="Placeholder: Third slide">
                                         <title>Placeholder</title>
                                         <rect width="100%" height="100%" fill="#555"></rect>
                                         <text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text>
@@ -736,11 +690,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </a>
@@ -763,8 +719,10 @@
                                     <span class="text-konkon">Section</span>
                                     Japanese</small>
                                 <h4 class="card-title mb-2">Why are flowers beautiful?</h4>
-                                <p class="mb-0">For whom does the flower bloom? It is for no one. A flower blooms only because it is a flower. It is only by fulfilling the role...
-                                    <a href="https://play.studiokonkon.com/posts/japanese/202112-why-are-flowers-beautiful/" class="stretched-link small">Read more</a>
+                                <p class="mb-0">For whom does the flower bloom? It is for no one. A flower blooms only
+                                    because it is a flower. It is only by fulfilling the role...
+                                    <a href="https://play.studiokonkon.com/posts/japanese/202112-why-are-flowers-beautiful/"
+                                        class="stretched-link small">Read more</a>
                                 </p>
                             </div>
                             <div class="card-footer pt-0">
@@ -785,8 +743,10 @@
                                     <span class="text-konkon">Section</span>
                                     Games</small>
                                 <h4 class="card-title mb-2">Super スタジオこんこん World</h4>
-                                <p class="mb-0">This Super World starts off with easy traditional levels in which players will get a feel of how she designs her wonderful level...
-                                    <a href="https://play.studiokonkon.com/posts/games/202011-smm2-super-studio-konkon-world/" class="stretched-link small">Read more</a>
+                                <p class="mb-0">This Super World starts off with easy traditional levels in which
+                                    players will get a feel of how she designs her wonderful level...
+                                    <a href="https://play.studiokonkon.com/posts/games/202011-smm2-super-studio-konkon-world/"
+                                        class="stretched-link small">Read more</a>
                                 </p>
                             </div>
                             <div class="card-footer pt-0">
@@ -807,8 +767,10 @@
                                     <span class="text-konkon">Section</span>
                                     Hugo</small>
                                 <h4 class="card-title mb-2">Markdown Syntax Guide</h4>
-                                <p class="mb-0">Sample article showcasing basic Markdown syntax and formatting for HTML elements.
-                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-markdown-syntax/" class="stretched-link small">Read more</a>
+                                <p class="mb-0">Sample article showcasing basic Markdown syntax and formatting for HTML
+                                    elements.
+                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-markdown-syntax/"
+                                        class="stretched-link small">Read more</a>
                                 </p>
                             </div>
                             <div class="card-footer pt-0">
@@ -830,7 +792,8 @@
                                     Hugo</small>
                                 <h4 class="card-title mb-2">Rich Content</h4>
                                 <p class="mb-0">A brief description of Hugo Shortcodes
-                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-rich-content/" class="stretched-link small">Read more</a>
+                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-rich-content/"
+                                        class="stretched-link small">Read more</a>
                                 </p>
                             </div>
                             <div class="card-footer pt-0">
@@ -852,7 +815,8 @@
                                     Hugo</small>
                                 <h4 class="card-title mb-2">Placeholder Text</h4>
                                 <p class="mb-0">Lorem Ipsum Dolor Si Amet
-                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-placeholder-text/" class="stretched-link small">Read more</a>
+                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-placeholder-text/"
+                                        class="stretched-link small">Read more</a>
                                 </p>
                             </div>
                             <div class="card-footer pt-0">
@@ -874,7 +838,8 @@
                                     Hugo</small>
                                 <h4 class="card-title mb-2">Math Typesetting</h4>
                                 <p class="mb-0">A brief guide to setup KaTeX
-                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-math-typesetting/" class="stretched-link small">Read more</a>
+                                    <a href="https://play.studiokonkon.com/posts/hugo/201903-math-typesetting/"
+                                        class="stretched-link small">Read more</a>
                                 </p>
                             </div>
                             <div class="card-footer pt-0">
@@ -897,817 +862,52 @@
 
         </div>
 
-        <div class="b-example-divider" style="    height: 1rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);"></div>
+        <div class="b-example-divider"></div>
         <div class="container">
-         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-           <div class="col-md-4 d-flex align-items-center">
-             <a href="/" class="me-2 text-muted text-decoration-none lh-1">
-               <span class="icon zmdi zmdi-menu" Xstyle="vertical-align: -.125em;
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="me-2 text-muted text-decoration-none lh-1">
+                        <span class="icon zmdi zmdi-menu" Xstyle="vertical-align: -.125em;
                   fill: currentColor;"></span>
-             </a>
-             <span class="text-muted">© 2023 Company, Inc</span>
-           </div>
-       
-           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-             <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-menu" style="vertical-align: -.125em;
-               fill: currentColor;"></span></a></li>
-             <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-menu" style="vertical-align: -.125em;
-               fill: currentColor;"></span></a></li>
-             <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-menu" style="vertical-align: -.125em;
-               fill: currentColor;"></span></a></li>
-           </ul>
-         </footer>
-       </div>
-
-
-        <style>:root
-        ,
-        .light {
-            --clr-foreground: hsl(0 0% 0%);
-            --clr-background: hsl(0 0% 100%);
-        }
-        .dark {
-            --clr-foreground: hsl(0 0% 100%);
-            --clr-background: hsl(0 0% 0%);
-        }
-        #theme-toggle {
-            font-size: 2em;
-            border-radius: 100vh;
-            padding: 0.2em 0.5em;
-            background: none;
-            border: none;
-            opacity: .5;
-            cursor: pointer;
-            position: relative;
-            display: block;
-            /*  margin: 1em auto 4em;*/
-        }
-        #theme-toggle::after {
-            content: attr(aria-label);
-            font-family: var(--mada);
-            position: absolute;
-            font-size: 0.8rem;
-            display: block;
-            top: 120%;
-            left: 50%;
-            width: max-content;
-            padding: 0.375em 0.75em;
-            color: var(--clr-background);
-            background-color: var(--clr-foreground);
-            transition: background-color 200ms linear;
-            border-radius: 0.25em;
-            opacity: 0;
-            transform: scale(0) translateX(-50%);
-            transform-origin: 0 0;
-            transition: transform 0.2s, opacity 0.2s;
-            pointer-events: none;
-        }
-        #theme-toggle:hover,
-        #theme-toggle:focus {
-            background: hsl(0 0% 50% / 0.15);
-            opacity: 1;
-            outline: none;
-        }
-        #theme-toggle:hover::after {
-            opacity: .7;
-            transform: scale(1) translateX(-50%);
-        }
-        #theme-toggle:focus::after {
-            opacity: .7;
-            transform: scale(1) translateX(-50%);
-        }
-
-        #theme-toggle svg {
-            display: block;
-            fill: var(--clr-foreground);
-            transition: fill 200ms linear;
-            -webkit-animation: rotate 1.5s linear infinite;
-            animation: rotate 1.5s linear infinite;
-        }
-        #theme-toggle circle {
-            transform: none;
-            transform-origin: 50% 50%;
-            transition: transform 0.5s;
-        }
-        .light-theme #theme-toggle circle {
-            transform: translateX(-72px) scaleY(1.143);
-        }
-        #theme-toggle .ray-ring {
-            transform-origin: center;
-            transition: transform 0.6s;
-        }
-        .light-theme .ray-ring {
-            transform: rotate(0);
-        }
-        .dark-theme .ray-ring {
-            transform: rotate(0.5turn);
-        }
-        /* 
-           Styles for the html/body for special modal where we want 3d effects
-           Note that we need a container wrapping all content on the page for the 
-           perspective effects (not including the modals and the overlay).
-           */
-        /*******************************
-           * MODAL AS LEFT/RIGHT SIDEBAR
-           * Add "left" or "right" in modal parent div, after class="modal".
-           * Get free snippets on bootpen.com
-           *******************************/
-        .modal.left .modal-dialog,
-        .modal.right .modal-dialog {
-            position: fixed;
-            margin: auto;
-            /* width: 320px; */
-            height: 100%;
-            -webkit-transform: translate3d(0%, 0, 0);
-            -ms-transform: translate3d(0%, 0, 0);
-            -o-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0);
-        }
-
-        .modal.left .modal-content,
-        .modal.right .modal-content {
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .modal.left .modal-body,
-        .modal.right .modal-body {
-            padding: 15px 15px 80px;
-        }
-
-        /*Left*/
-        .modal.left.fade .modal-dialog {
-            left: -320px;
-            -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-            transition: opacity 0.3s linear, left 0.3s ease-out;
-        }
-
-        .modal.left.fade.show .modal-dialog {
-            left: 0;
-        }
-
-        /*Right*/
-        .modal.right.fade .modal-dialog {
-            right: -320px;
-            -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-            transition: opacity 0.3s linear, right 0.3s ease-out;
-        }
-
-        .modal.right.fade.show .modal-dialog {
-            right: 0;
-        }
-
-        /* ----- MODAL STYLE ----- */
-        .modal-content {
-            border-radius: 0;
-            border: none;
-        }
-
-        .modal-header {
-            border-bottom-color: #EEEEEE;
-            background-color: #FAFAFA;
-            border-radius: 0;
-        }
-
-        /* ----- v CAN BE DELETED v ----- */
-        .modal .modal-dialog-slideout .modal-header {
-            height: 50px;
-            background: linear-gradient(40deg, #52f111, #007001b1) !important;
-            color: azure;
-            border-bottom: 1px solid var(--green);
-            padding: 0.8rem;
-        }
-
-        .modal .modal-dialog-slideout .modal-slide-title {
-            display: flex;
-            grid-gap: 10px;
-            line-height: 1.2;
-            align-items: center;
-        }
-
-        .modal .modal-dialog-slideout .modal-content {
-            background: var(--light);
-            overflow-y: visible;
-            color: var(--bs-modal-clr);
-        }
-
-        .modal .modal-dialog-slideout .modal-body {
-            overflow-y: auto;
-        }
-
-        .modal .modal-dialog-slideout .modal-content .modal-footer {
-            box-shadow: rgb(50 11 25 / 50%) 0 25px 70px 4px;
-            /* background: linear-gradient(to left, var(--grad-shdw-2) 95%,var(--grad-shdw-1) 100%); */
-            background: linear-gradient(0deg, var(--grad-shdw-1), var(--grad-shdw-2), var(--grad-shdw-2));
-        }
-
-        .modal .modal-dialog-slideout .modal-footer {
-            border-radius: 0;
-        }
-        .modal .modal-footer {
-            border-radius: 0 0 15px 15px;
-        }
-        .modal .modal-footer {
-            width: 100%;
-            height: 56px;
-            padding: 4px 6px;
-            text-align: right;
-            /* background-color: #fafafa; */
-            background-color: var(--light);
-            justify-content: center;
-            border-top: 1px solid var(--light);
-        }
-        .submit-section-slide {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-        }
-        .indicator {
-            position: absolute;
-            bottom: 39px;
-            width: 180px;
-            height: 20px;
-            background: var(--light);
-            border-radius: 35px 35px 15px 15px;
-            z-index: 1;
-            transition: 0.5s;
-            box-shadow: rgb(50 11 25 / 25%) 0 25px 70px 4px;
-        }
-
-        .modal .modal-footer .btn-custom {
-            font-size: 12px;
-            padding: 12px 20px;
-            letter-spacing: 1.7px;
-            text-transform: uppercase;
-            border-radius: 2px;
-            outline: none;
-            -webkit-transition: 0.15s linear;
-            transition: 0.15s linear;
-            width: 123px;
-            margin: 0;
-        }
-        .modal .modal-footer .btn-custom:nth-child(1) {
-            border-radius: 20px 0 0 20px;
-        }
-        .modal .modal-footer .btn-custom:nth-child(2) {
-            border-radius: 0 20px 20px 0;
-        }
-
-        /* FORM */
-        .form-dark-light,
-        .form-dark-light:disabled,
-        .form-dark-light[readonly] {
-            background: var(--c-select);
-            border-color: var(--c-select);
-        }
-        .form-dark-light:focus {
-            color: var(--c-text);
-            border-color: var(--c-text);
-            background-color: var(--c-select);
-            box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.33);
-        }
-        .form-control {
-            color: var(--c-text);
-        }
-        select.form-control.form-dark-light[multiple] {
-            height: auto;
-            background: var(--c-select);
-            color: var(--c-select);
-        }
-        .custom-select,
-        .custom-select:disabled {
-            appearance: none;
-            background-image: url('https://dl.dropbox.com/s/6q2p49jczkvy2n1/arrows-bg.svg');
-            background-position: calc(100% - 14px) -32px, 100%, calc(100% - 32px) 0;
-            background-size: auto, 34px 100%, 1px 100%;
-            background-repeat: no-repeat;
-        }
-        .custom-select:focus {
-            background-image: url('https://dl.dropbox.com/s/6q2p49jczkvy2n1/arrows-bg.svg');
-            background-position: calc(100% - 14px) 12px, 100%, calc(100% - 34px) 0;
-        }
-        .custom-file-label {
-            background: var(--grey);
-            color: var(--dark);
-        }
-
-        .form-control.form-control-border,
-        .custom-select.form-control-border {
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            border-radius: 0;
-            box-shadow: inherit;
-        }
-
-        .form-control.form-control-border.border-width-2,
-        .custom-select.form-control-border.border-width-2 {
-            border-bottom-width: 2px;
-        }
-
-        .form-control.form-control-border.border-width-3,
-        .custom-select.form-control-border.border-width-3 {
-            border-bottom-width: 3px;
-        }
-
-        .form-control.is-warning {
-            border-color: #ffc107;
-        }
-
-        .custom-control-input-danger:checked~.custom-control-label::before {
-            border-color: #dc3545;
-            background-color: #dc3545;
-        }
-
-        .custom-switch.custom-switch-off-danger .custom-control-input~.custom-control-label::before {
-            background-color: #dc3545;
-            border-color: #921925;
-        }
-        .custom-switch.custom-switch-off-danger .custom-control-input~.custom-control-label::after {
-            background-color: #7c151f;
-        }
-        input:-webkit-autofill,
-        input:-webkit-autofill:focus {
-            transition: background-color 600000s 0s, color 600000s 0s;
-        }
-        .selectize-input,
-        .selectize-control.single .selectize-input.input-active,
-        .selectize-input,
-        .selectize-input.full,
-        .selectize-control.single .selectize-input,
-        .selectize-control.multi .selectize-input,
-        .selectize-control.multi .selectize-input.focus .item.active {
-            background: var(--c-select);
-            border-color: var(--c-select);
-            color: var(--dark-f-dark);
-        }
-        .selectize-control.single .selectize-input.input-active,
-        .selectize-control.multi .selectize-input.focus {
-            border-color: var(--derift-thm-bg);
-            box-shadow: var(--derift-thm-shdw);
-        }
-        .selectize-dropdown,
-        .selectize-dropdown.form-control {
-            background: var(--c-select);
-            color: var(--dark-f-dark);
-            border-radius: 0 0 10px 10px;
-        }
-        .selectize-dropdown [data-selectable].option.active {
-            background: var(--derift-thm-bg);
-            color: #fff;
-        }
-        .selectize-control.multi .selectize-input > div {
-            background: var(--light);
-            color: var(--dark);
-        }
-        .selectize-control.plugin-remove_button [data-value] .remove {
-            position: inherit;
-        }
-
-        /* PHOTOINPUT */
-        .profile-photo-div {
-            position: relative;
-            margin: 0 auto 10px;
-            /* width: 250px; */
-            max-width: 150px;
-            height: auto;
-            overflow: hidden;
-            border-radius: 10px;
-            -webkit-transition: ease 0.3s;
-            -o-transition: ease 0.3s;
-            transition: ease 0.3s;
-        }
-        .profile-img-div {
-            display: block;
-            position: relative;
-            overflow: hidden;
-            min-height: 150px;
-        }
-        .profile-photo-div #ploader {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background-color: #00cccf;
-            z-index: 10;
-            -webkit-transition: 0.3s;
-            -o-transition: 0.3s;
-            transition: 0.3s;
-        }
-        .profile-photo-div #profile-img {
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-        .profile-photo-div #change-photo {
-            display: none;
-        }
-        .profile-buttons-div {
-            position: relative;
-            display: block;
-        }
-        .profile-photo-div .button {
-            position: relative;
-            display: block;
-            font-family: helvetica, sans-serif;
-            font-size: 15px;
-            padding: 15px;
-            text-align: center;
-            color: white;
-            /* background-color: #00cccf; */
-            background-color: #4ec231;
-            cursor: pointer;
-            -webkit-transition: 0.5s;
-            -o-transition: 0.5s;
-            transition: 0.5s;
-            overflow: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .profile-photo-div .button:hover {
-            letter-spacing: 0.5px;
-        }
-        .profile-photo-div .button:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            width: 10px;
-            height: 10px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            opacity: 0;
-            -webkit-transition: 0.9s;
-            -o-transition: 0.9s;
-            transition: 0.9s;
-        }
-        .profile-photo-div .button:hover:after {
-            -webkit-transform: scale(50);
-            -ms-transform: scale(50);
-            transform: scale(50);
-            opacity: 1;
-        }
-        #change-photo-label {
-            border-radius: 0 0 50% 50%;
-        }
-        .profile-photo-div .button.half {
-            width: 50%;
-        }
-        .profile-photo-div .green {
-            background-color: #15ae6b;
-        }
-        .profile-photo-div .red {
-            background-color: #ae0000;
-        }
-        .profile-img-confirm {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            width: 100%;
-        }
-        .help-text {
-            margin-top: 5px;
-            font-size: 12px;
-            color: #7e7e7e;
-            border-radius: 36px;
-            padding: 5px;
-        }
-        .tab-menu {
-            margin: 0;
-            padding: 0;
-        }
-        .tab-menu li {
-            list-style-type: none;
-            display: inline-block;
-        }
-        .tab-menu li.active > a {
-            border-color: #cfcfcf #cfcfcf transparent #cfcfcf;
-            background: var(--light);
-            color: var(--dark);
-            border-radius: 12px 12px 0 0;
-        }
-        .tab-menu li a {
-            display: block;
-            color: var(--dark);
-            border-style: solid;
-            border-width: 2px;
-            border-color: #cfcfcf;
-            background: var(--light);
-            padding: 4px 15px;
-            position: relative;
-            top: 2px;
-            margin-right: 10px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .wrapper__personal {
-            border-top: 2px solid #cfcfcf;
-            height: auto;
-            /* padding: 2rem 0; */
-            margin-left: 0;
-            margin-right: 0;
-        }
-        .wrapper__account--top {
-            /* padding: 2rem 0 0; */
-            margin-left: 0;
-            margin-right: 0;
-        }
-    </style>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalrg">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal right fade" id="myModalrg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-        <div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h4 class="modal-title">Custom Colored Header</h4>
-                    <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </a>
+                    <span class="text-muted">© 2023 SIPDOS, Inc</span>
                 </div>
 
-                <div class="modal-body">
-                    <form id="regForm">
-                        <div class="row">
-                            <div class="col-md-4 mrb-t20 text-center center-mb" style="background: var(--shdw-modal);">
-                                <label>
-                                    <b>Foto User</b>
-                                </label>
-                                <br>
-                                <div class="profile-photo-div" id="profile-photo-div">
-                                    <div class="profile-img-div" id="profile-img-div">
-                                        <div id="ploader"></div>
-                                        <img id="profile-img" src="assets/img/avatars/default-user.png">
-                                    </div>
-                                    <div class="profile-buttons-div">
-                                        <div class="profile-img-input" id="profile-img-input">
-                                            <label class="button" id="change-photo-label" for="change-photo" style="display: flex;justify-content: center;align-items: center;grid-gap: 5px;">
-                                                <i class="zmdi zmdi-image"></i>Pilih foto
-                                            </label>
-                                            <input id="change-photo" name="img" type="file" style="display: none" accept="image/*">
-                                        </div>
-                                        <div
-                                            class="profile-img-confirm" id="profile-img-confirm" style="display: none">
-                                            <!-- <div class="button half green" id="save-img"><i class="fa fa-check" aria-hidden="true"></i></div> -->
-                                            <div style="width:100%;border-radius: 0 0 50% 50%;" class="button Xhalf red" id="cancel-img">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="help-text">Ukuran foto maksimal adalah 300kb dengan format JPG dan PNG.</p>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="row wrapper__account--top">
-                                    <div class="col-sm-12">
-                                        <ul class="tab-menu">
-                                            <li class="active">
-                                                <a>
-                                                    <i class="fa fa-user visible-xs-inline-block pr-2" aria-hidden="true"></i>
-                                                    <span class="hidden-xs">IDENTITAS</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div
-                                    class="wrapper__personal" style="padding: 1rem 0 0;">
-                                    <!-- <form id="formUbhProfil"> -->
-                                    <div class="form-group mb-3">
-                                        <label>Nama Lengkap
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="cal-icon">
-                                            <input id="nama" name="nama" class="form-control form-dark-light" type="text" maxlength="32">
-                                            <input id="x" name="x" class="form-control form-dark-light" type="hidden">
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label>Gelar Depan
-                                                    <span class="text-danger"></span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="gdp" name="gdp" maxlength="14">
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <label>Gelar Belakang
-                                                    <span class="text-danger"></span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="gbl" name="gbl" maxlength="32">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label>Tempat, Tanggal Lahir
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="tempat" name="tempat">
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" data-toggle="datepicker" type="text" id="lahir" name="lahir">
-                                                    <span class="ico-1 icofont-ui-calendar" id="ico-1"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label>Jenis Kelamin
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <select xplaceholder="Jenis Kelamin" class="form-control selectize" id="jk" name="jk">
-                                                        <option value="" disabled="" selected="">-Pilih-</option>
-                                                        <option value='Laki-laki'>Laki-laki</option>
-                                                        <option value='Perempuan'>Perempuan</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <label>Status Pernikahan
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <select xplaceholder="Status Pernikahan" class="form-control selectize" id="sp" name="sp">
-                                                        <option value="" disabled="" selected="">-Pilih-</option>
-                                                        <option value='Lajang'>Lajang</option>
-                                                        <option value='Menikah'>Menikah</option>
-                                                        <option value='Duda/Janda'>Duda/Janda</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label>Pendidikan Terakhir
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="cal-icon">
-                                            <select class="form-control form-control-inverse selectize" id="pddt" name="pddt">
-                                                <option value="" disabled="" selected="">-Pilih-</option>
-                                                <option value="3_S3">S3</option>
-                                                <option value="2_S2">S2</option>
-                                                <option value="1_S1">S1</option>
-                                                <option value="0_SLTA">SLTA</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label>Nomor NIK (KTP)
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <div class="cal-icon">
-                                            <input id="nik" name="nik" class="form-control form-dark-light" type="text" maxlength="18">
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label>Nomor HP
-                                                    <span class="text-danger"></span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="hp" name="hp" maxlength="14">
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <label>Email
-                                                    <span class="text-danger"></span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="email" name="email" maxlength="32">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label>Alamat
-                                            <span class="text-danger"></span>
-                                        </label>
-                                        <div class="cal-icon">
-                                            <input class="form-control form-dark-light" type="text" id="alamat" name="alamat">
-                                        </div>
-                                    </div>
-                                    <div class="row wrapper__account--top">
-                                        <div class="col-sm-12">
-                                            <ul class="tab-menu">
-                                                <li class="active">
-                                                    <a>
-                                                        <i class="fa fa-user visible-xs-inline-block pr-2" aria-hidden="true"></i>
-                                                        <span class="hidden-xs">KEPEGAWAIAN</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wrapper__personal" style="padding: 1rem 0;">
-                                    <div class="form-group mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label>Status Kepegawaian
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <select xplaceholder="Status Kepegawaian" class="form-control selectize" id="skp" name="skp">
-                                                        <option value="" disabled="" selected="">-Pilih-</option>
-                                                        <option value='PNS'>PNS</option>
-                                                        <option value='CPNS'>CPNS</option>
-                                                        <option value='HONORER'>HONORER</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="col"><label>Pangkat / Gol.<span class="text-danger"></span></label><div class="cal-icon"><input class="form-control form-dark-light" type="text" id="gol" name="gol" readonly></div></div> -->
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label>Jabatan Struktural<span class="text-danger">*</span>
-                                        </label>
-                                        <div class="cal-icon">
-                                            <select xplaceholder="Pilih Jenis PTK" class="form-control selectize" id="jp" name="jp">
-                                                <option value="" disabled="" selected="">-Pilih-</option>
-                                                <option value='1'>Dekan</option>
-                                                <option value='2'>Wadek</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label>NIK
-                                                    <span class="text-danger"></span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="nip" name="nip" maxlength="14">
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <label>NIDN
-                                                    <span class="text-danger"></span>
-                                                </label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control form-dark-light" type="text" id="nidn" name="nidn" maxlength="32">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-menu" style="vertical-align: -.125em;
+               fill: currentColor;"></span></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-menu" style="vertical-align: -.125em;
+               fill: currentColor;"></span></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-menu" style="vertical-align: -.125em;
+               fill: currentColor;"></span></a></li>
+                </ul>
+            </footer>
+        </div>
+        
+        <div class="modal modal-full-color modal-danger fade" id="logoutConfirm" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center align-items-center">
+                        <div class="text-center" style="width:100%;">
+                            <span class="modal-main-icon zmdi zmdi-info-outline"></span>
+                            <h3>Konfirmasi</h3>
+                            <p>Anda yakin akan keluar?</p>
+                            <div class="mt-5"> 
+                                <button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal" style="min-width: 100px;">Batal</button>
+                                <button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal" style="min-width: 100px;">Keluar</button>
                             </div>
                         </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer text-right" style="height: 55px;padding: 0;">
-                    <div class="submit-section text-center submit-section-slide" xstyle="margin-top:36px">
-                        <button type="button" class="btn btn-danger btn-custom soundslideron" data-bs-dismiss="modal" style="border-radius: 20px 0 0 20px;z-index: 2;">
-                            <i style="margin: 0 5px 0 0!important;" class="p-0 zmdi zmdi-download"></i>
-                            Batal
-                        </button>
-                        <button type="button" class="btn btn-success btn-custom soundslideron" id="Act" style="border-radius: 0px 20px 20px 0px; width: auto !important;z-index: 2;" onclick="addMbr()">
-                            <i style="margin: 0 0px 0 0!important;" class="p-0 zmdi zmdi-download"></i>
-                        </button>
-                        <div class="indicator"></div>
                     </div>
                 </div>
-
             </div>
-            <!-- modal-content -->
         </div>
-        <!-- modal-dialog -->
-    </div>
-    <!-- modal -->
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/default.script.js" async defer></script>
+</body>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/default.script.js" async defer></script>
-</body></body></html>
+</html>
