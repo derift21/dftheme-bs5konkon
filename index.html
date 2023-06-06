@@ -25,11 +25,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="assets/css/custom.style.css">
+    <link rel="stylesheet" href="assets/css/custom.style.css">    
 
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                console.log(document.readyState);
+                document.getElementById("PreLoaderBar").style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body class="bg-light" style="overflow-x: hidden;">
+    <div class='progress' id='PreLoaderBar'>
+        <div class='indeterminate'/>
+    </div>
+    <!-- <style> .progress { position: relative; height: 2px; display: block;z-index: 9999; width: 100%; background-color: white; border-radius: 2px; background-clip: padding-box; /*margin: 0.5rem 0 1rem 0;*/ overflow: hidden; } .progress .indeterminate { background-color:black; } .progress .indeterminate:before { content: ''; position: absolute; background-color: #2C67B1; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; } .progress .indeterminate:after { content: ''; position: absolute; background-color: #2C67B1; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; -webkit-animation-delay: 1.15s; animation-delay: 1.15s; } @-webkit-keyframes indeterminate { 0% { left: -35%; right: 100%; } 60% { left: 100%; right: -90%; } 100% { left: 100%; right: -90%; } } @keyframes indeterminate { 0% { left: -35%; right: 100%; } 60% { left: 100%; right: -90%; } 100% { left: 100%; right: -90%; } } @-webkit-keyframes indeterminate-short { 0% { left: -200%; right: 100%; } 60% { left: 107%; right: -8%; } 100% { left: 107%; right: -8%; } } @keyframes indeterminate-short { 0% { left: -200%; right: 100%; } 60% { left: 107%; right: -8%; } 100% { left: 107%; right: -8%; } } </style> -->
+
     <style>
         .preloader-wrap {
           width: 100%;
@@ -37,7 +50,8 @@
           position: fixed;
           top: 0; 
           bottom: 0;
-          background: rgba(0,0,0,1);
+          /* background: rgba(0,0,0,1); */
+          background: rgb(0 0 0 / 0%);
           z-index : 2; 
         }
         
@@ -130,7 +144,7 @@
           }
         }
     </style>
-        <div class="preloader-wrap">
+        <!-- <div class="preloader-wrap">
             <div class="percentage" id="precent"></div>
             <div class="loader">
                 <div class="trackbar">
@@ -138,7 +152,7 @@
                 </div>
                 <div class="glow"></div>
             </div>
-        </div>    
+        </div>     -->
     <div class="be-wrapper be-offcanvas-menu be-fixed-sidebar"
         style="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
 
@@ -1102,50 +1116,50 @@
 
             
             // LOADER
-            var width = 100,
-            perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
-            EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-            time = parseInt((EstimatedTime/1000)%60)*100;
+            // var width = 100,
+            // perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
+            // EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+            // time = parseInt((EstimatedTime/1000)%60)*100;
 
-            // Loadbar Animation
-            $(".loadbar").animate({
-            width: width + "%"
-            }, time);
+            // // Loadbar Animation
+            // $(".loadbar").animate({
+            // width: width + "%"
+            // }, time);
 
-            // Loadbar Glow Animation
-            $(".glow").animate({
-            width: width + "%"
-            }, time);
+            // // Loadbar Glow Animation
+            // $(".glow").animate({
+            // width: width + "%"
+            // }, time);
 
-            // Percentage Increment Animation
-            var PercentageID = $("#precent"),
-                start = 0,
-                end = 100,
-                durataion = time;
-                animateValue(PercentageID, start, end, durataion);
+            // // Percentage Increment Animation
+            // var PercentageID = $("#precent"),
+            //     start = 0,
+            //     end = 100,
+            //     durataion = time;
+            //     animateValue(PercentageID, start, end, durataion);
                 
-            function animateValue(id, start, end, duration) {
+            // function animateValue(id, start, end, duration) {
             
-            var range = end - start,
-                current = start,
-                increment = end > start? 1 : -1,
-                stepTime = Math.abs(Math.floor(duration / range)),
-                obj = $(id);
+            // var range = end - start,
+            //     current = start,
+            //     increment = end > start? 1 : -1,
+            //     stepTime = Math.abs(Math.floor(duration / range)),
+            //     obj = $(id);
                 
-            var timer = setInterval(function() {
-                current += increment;
-                $(obj).text(current + "%");
-                //obj.innerHTML = current;
-                if (current == end) {
-                clearInterval(timer);
-                }
-            }, stepTime);
-            }
+            // var timer = setInterval(function() {
+            //     current += increment;
+            //     $(obj).text(current + "%");
+            //     //obj.innerHTML = current;
+            //     if (current == end) {
+            //     clearInterval(timer);
+            //     }
+            // }, stepTime);
+            // }
 
-            // Fading Out Loadbar on Finised
-            setTimeout(function(){
-            $('.preloader-wrap').fadeOut(300);
-            }, time);            
+            // // Fading Out Loadbar on Finised
+            // setTimeout(function(){
+            // $('.preloader-wrap').fadeOut(100);
+            // }, time);            
         </script>
 </body>
 </html>
