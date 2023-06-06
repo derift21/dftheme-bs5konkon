@@ -412,9 +412,9 @@ cursor.init();
 // });
 
 var mySidebar = new Sidebar("#left-sidebar");
-mySidebar.createToggle("#left-sidebar-toggle");
+    mySidebar.createToggle("#left-sidebar-toggle");
 
-mySidebar.open();
+// mySidebar.open();
 
 //console.log(mySidebar);
 

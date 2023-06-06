@@ -114,6 +114,9 @@ body.bg-light {
 }
 /* NAVHEADER */
 
+html, body{
+   overflow: hidden;
+}
 /* SIDEBAR */
 .sidebar-header {   
    display: flex;
