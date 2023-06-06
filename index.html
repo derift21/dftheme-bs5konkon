@@ -57,7 +57,7 @@
         border-radius: 0 0 20px 20px;
         font-weight: 900;
         position: absolute;
-        top: 0;
+        top: -5px;
         /* bottom: -8px; */
         left: 0;
         right: 0;
@@ -1361,7 +1361,7 @@
             
             // Fading Out Loadbar on Finised
             setTimeout(function(){
-            $('.preloader-wrap').fadeOut(300);
+            // $('.preloader-wrap').fadeOut(300);
             $(' html, body').css({'overflow-x': 'hidden','overflow-y': 'auto'});
                 if(parseInt(getBrowserSize().width) > 576){
                     mySidebar.open();
