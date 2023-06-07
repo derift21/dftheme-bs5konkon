@@ -21,7 +21,11 @@
    --c-block: #fff;
    --c-line: #e4edfc;
    --r3x: 12px;  
-   --wh-scrollbar: 10px;   
+   --wh-scrollbar: 10px;  
+
+    --sk-sidebar-bg-rgb: 27, 25, 148;
+    --sk-sidebar-color-rgb: 76, 114, 172;
+    --bs-light-rgb: 44, 80, 117; 
 }
 body.dark {
    --light-nav: #2d2e33;
@@ -117,6 +121,10 @@ body.bg-light {
 /* NAVHEADER */
 
 /* SIDEBAR */
+.text-bg-konkon {
+      color: #fff !important;
+      background-color: rgba(50, 117, 138, var(--bs-bg-opacity, 1)) !important;
+}
 .sidebar-header {   
    display: flex;
    align-items: flex-start;
@@ -137,7 +145,7 @@ body.bg-light {
    text-align: center;
 }
 .sidebar-header {
-   grid-gap: 20px;
+   grid-gap: 8px;
 }
 .sidebar-header .applogo {
    font-size: 50px;
@@ -257,6 +265,12 @@ body.bg-light {
    transform: rotate(-180deg);
 }
 /* SIDEBAR */
+
+@media (max-width:360px) {
+  .sidebar-header {
+      transform: translateX(-25px) scale(.7);
+  }
+}
 
 /* DASHBOARD */
 .homepage-header {

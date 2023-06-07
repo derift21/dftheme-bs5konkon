@@ -62,7 +62,7 @@
 <body class="bg-light" style="overflow-x: hidden;">    
             
     <div class="be-wrapper be-offcanvas-menu be-fixed-sidebar"
-        style="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
+       xstyle="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
 
         <nav class="navbar navbar-expand fixed-top be-top-header">
             <div class="container-fluid">
@@ -456,7 +456,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label">Tema: Terang</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
+                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label" onclick="changeThm()">Tema: Terang</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
                                 </ul>
                                 <div class="skk-nva">
                                     <a href="#">
@@ -642,9 +642,9 @@
                     <div class="col">
                         <div class="card card-body h-100 text-center rounded-3">
                             <div class="display-3 mb-2 text-info">
-                                <i class="zmdi zmdi-gamepad"></i>
+                                <i class="icon zmdi zmdi-accounts"></i>
                             </div>
-                            <h5>Gaming</h5>
+                            <h5>Daftar Member</h5>
                             <p class="mb-0">A place to discover my gaming activity and content.</p>
                             <a href="https://play.studiokonkon.com/games/" class="stretched-link"></a>
                         </div>
@@ -1094,7 +1094,11 @@
                 if(parseInt(getBrowserSize().width) > 576){
                     mySidebar.open();
                 }
-            }, time);                          
+            }, time);       
+            
+            function changeThm(){
+                document.getElementById("theme-toggle").click();
+            };
         </script>
 </body>
 </html>
