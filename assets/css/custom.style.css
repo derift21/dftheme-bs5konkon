@@ -23,10 +23,10 @@
    --r3x: 12px;  
    --wh-scrollbar: 10px;  
 
-    --sk-sidebar-bg-rgb: 27, 25, 148;
-    --sk-sidebar-color-rgb: 76, 114, 172;
-    --bs-light-rgb: 44, 80, 117; 
-    --bs-konkon-rgb: 105, 102, 254;
+    --sk-sidebar-bg-rgb: 25, 109, 148;
+    --sk-sidebar-color-rgb: 76, 161, 172;
+    --bs-light-rgb: 44, 96, 117; 
+    --bs-konkon-rgb: 42, 155, 207;
 }
 body.dark {
    --light-nav: #2d2e33;
@@ -72,6 +72,12 @@ body.dark {
 /* NAVHEADER */
 body.bg-light {
    background-color: var(--light-bg) !important;
+}
+.card-shadow {    
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-shadow:hover {
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 .card {
    background-color: var(--light);
@@ -121,6 +127,10 @@ body.bg-light {
 }
 /* NAVHEADER */
 
+@import url("//fonts.googleapis.com/css?family=Pacifico&text=Pure");
+html {
+      overflow: hidden;
+}
 /* SIDEBAR */
 .text-bg-konkon {
       color: #fff !important;
@@ -365,6 +375,12 @@ body.bg-light {
       transition: fill 200ms linear;
       -webkit-animation: rotate 1.5s linear infinite;
       animation: rotate 1.5s linear infinite;
+}
+#theme-toggle svg:target {
+      transform: matrix(0.90, 0, 0, 0.90, 0, 0);
+}
+.pressed {
+      transform: matrix(0.90, 0, 0, 0.90, 0, 0);
 }
 
 #theme-toggle circle {

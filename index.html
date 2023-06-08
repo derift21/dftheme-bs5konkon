@@ -140,7 +140,8 @@
                             function enableDarkMode() {
                                 document.body.classList.remove('light');
                                 document.body.classList.add('dark');
-                                themeToggle.setAttribute('aria-label', 'Mode terang');
+                                themeToggle.setAttribute('aria-label', 'Mode terang');                                
+                                $('#nav-thm-toggle').html("Tema: Gelap");
                                 localStorage.setItem('modePref', 'dark');
                             }
 
@@ -148,20 +149,23 @@
                                 document.body.classList.remove('dark');
                                 document.body.classList.add('light');
                                 themeToggle.setAttribute('aria-label', 'Mode gelap');
+                                $('#nav-thm-toggle').html("Tema: Terang");                                
                                 if (localStorage.getItem('modePref') === 'dark') {
-                                    localStorage.setItem('modePref', 'light');
+                                    localStorage.setItem('modePref', 'light');                                    
                                 }
                             }
 
                             function setThemePreference() {
                                 if (modePref === 'dark') {
-                                    enableDarkMode();
+                                    enableDarkMode();                                    
                                 } else if (modePref === 'light') {
-                                    enableLightMode();
+                                    enableLightMode();                                    
                                 } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                                     enableDarkMode();
+                                    $('#nav-thm-toggle').html("Tema: Gelap");
                                 } else {
                                     enableLightMode();
+                                    $('#nav-thm-toggle').html("Tema: Terang");
                                 }
                             }
                             document.onload = setThemePreference();
@@ -456,7 +460,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label" onclick="changeThm()">Tema: Terang</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
+                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label" id="nav-thm-toggle" onclick="changeThm()">Tema: Gelap</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
                                 </ul>
                                 <div class="skk-nva">
                                     <a href="#">
@@ -630,43 +634,43 @@
             <section class="homepage-header-list container-fluid container-md">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center">
                     <div class="col">
-                        <div class="card card-body h-100 text-center rounded-3">
-                            <div class="display-3 mb-2 text-warning">
-                                <i class="zmdi zmdi-collection-music"></i>
-                            </div>
-                            <h5>Music</h5>
-                            <p class="mb-0">An area of musical creativity, resources and articles.</p>
-                            <a href="https://play.studiokonkon.com/music/" class="stretched-link"></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card card-body h-100 text-center rounded-3">
+                        <div class="card card-body h-100 text-center rounded-3 card-shadow">
                             <div class="display-3 mb-2 text-info">
                                 <i class="icon zmdi zmdi-accounts"></i>
                             </div>
-                            <h5>Daftar Member</h5>
+                            <h5>Member</h5>
                             <p class="mb-0">A place to discover my gaming activity and content.</p>
-                            <a href="https://play.studiokonkon.com/games/" class="stretched-link"></a>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card card-body h-100 text-center rounded-3">
+                        <div class="card card-body h-100 text-center rounded-3 card-shadow">
+                            <div class="display-3 mb-2 text-warning">
+                                <i class="zmdi zmdi-calendar-note"></i>
+                            </div>
+                            <h5>Jadwal</h5>
+                            <p class="mb-0">An area of musical creativity, resources and articles.</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>                    
+                    <div class="col">
+                        <div class="card card-body h-100 text-center rounded-3 card-shadow">
                             <div class="display-3 mb-2 text-success">
                                 <i class="icon zmdi zmdi-calendar-note"></i>
                             </div>
                             <h5>Presensi</h5>
                             <p class="mb-0">A collection of articles on various topics and interests.</p>
-                            <a href="https://play.studiokonkon.com/posts/" class="stretched-link"></a>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card card-body h-100 text-center rounded-3">
-                            <div class="display-3 mb-2 text-success">
+                        <div class="card card-body h-100 text-center rounded-3 card-shadow">
+                            <div class="display-3 mb-2 text-danger">
                                 <i class="icon zmdi zmdi-calendar-note"></i>
                             </div>
                             <h5>Cuti</h5>
                             <p class="mb-0">A collection of articles on various topics and interests.</p>
-                            <a href="https://play.studiokonkon.com/posts/" class="stretched-link"></a>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
@@ -939,6 +943,76 @@
                 </div>
             </div>            
         </div>  
+
+
+        <button onclick="geoFindMe()">
+            <i class="material-icons">my_location</i>
+        </button>
+          
+          <div id="out"></div>
+          
+          <div id="map"></div>
+          
+          load geolocation
+          update location
+          - either update geolocation
+          - or set location via search (city, zip, address)
+<script>
+var map, marker, pos;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: pos,
+    zoom: 13
+  });
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {lat:position.coords.latitude,lng:position.coords.longitude}
+      var marker = new google.maps.Marker({
+        position: pos,
+        map: map
+      });
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, marker, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, marker, map.getCenter());
+  }
+  function handleLocationError(browserHasGeolocation, marker, pos) {
+    marker.setPosition(pos);
+    marker.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
+    marker.open(map);
+  }
+}
+
+initMap();
+
+var pos = geoFindMe();
+
+function geoFindMe() {
+  var output = document.getElementById("out");
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Where do you want to look for options?</p>";
+    return;
+  }
+  function success(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    var pos = {lat:lat, lng:lng};
+    output.innerHTML = 'It looks like you\'re currently somewhere close to '  + pos.lat + ',' + pos.lng + '. Is this where you\'d like to look for options?';
+  }
+  function error() {
+    output.innerHTML = "Unable to retrieve your location";
+  }
+  output.innerHTML = "<p>Locating…</p>";
+  navigator.geolocation.getCurrentPosition(success, error);
+  initMap();
+}
+</script>
                 
         <div class="cursor-dot-outline"></div>
         <div class="cursor-dot"></div>
@@ -1090,7 +1164,7 @@
             // Fading Out Loadbar on Finised
             setTimeout(function(){
             $('.preloader-wrap').fadeOut(300);
-            // $(' html, body').css({'overflow-x': 'hidden','overflow-y': 'auto'});
+            $(' html, body').css({'overflow-x': 'hidden','overflow-y': 'auto'});
                 if(parseInt(getBrowserSize().width) > 576){
                     mySidebar.open();
                 }
@@ -1099,6 +1173,26 @@
             function changeThm(){
                 document.getElementById("theme-toggle").click();
             };
+
+            $("#theme-toggle svg").mousedown(function(){
+                $(this).addClass("pressed");
+            });
+
+            $("#theme-toggle svg").mouseup(function(){
+                $(this).removeClass("pressed");
+            });
+
+            $("#theme-toggle svg").on("tap",function(){
+                $(this).addClass("pressed");
+            });
+
+            $("#theme-toggle svg").on("tap",function(){
+                $(this).removeClass("pressed");
+            });
+
+            $("#theme-toggle svg").mouseout(function(){
+                $(this).removeClass("pressed");
+            });
         </script>
 </body>
 </html>
