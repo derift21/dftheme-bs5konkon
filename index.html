@@ -453,7 +453,7 @@
                                             <div class="skk-nvli-icon">
                                                 <i class="zmdi zmdi-globe-alt"></i>
                                             </div>
-                                            <div class="skk-nvli-label">Lokasi: Tidak diketahui</div>
+                                            <div class="skk-nvli-label" id="detect">Lokasi: Tidak diketahui</div>
                                             <div class="skk-nvli-subtitle"></div>
                                             <div class="skk-nvli-icon">
                                                 <i class="zmdi zmdi-chevron-right"></i>
@@ -944,74 +944,74 @@
             </div>            
         </div>  
 
-
-        <button onclick="geoFindMe()">
-            <i class="material-icons">my_location</i>
-        </button>
-          
-          <div id="out"></div>
-          
-          <div id="map"></div>
-          
-          load geolocation
-          update location
-          - either update geolocation
-          - or set location via search (city, zip, address)
+<!-- <button id="detect">Detect your location</button> -->
 <script>
-var map, marker, pos;
+let arr = ["8bb0d", "f341b6", "789774", "60a28", "846541e"],
+joinArr = arr.join("").split("").reverse().join(""),
+splitString = joinArr.split("76"),
+concatStrings = splitString[0] + splitString[1];
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: pos,
-    zoom: 13
-  });
+const button = document.querySelector("#detect");
+button.addEventListener("click", ()=>{
+    if(navigator.geolocation){
+        button.innerText = "Allow to detect location";
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }else{
+        button.innerText = "Your browser not support";
+    }
+});
 
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {lat:position.coords.latitude,lng:position.coords.longitude}
-      var marker = new google.maps.Marker({
-        position: pos,
-        map: map
-      });
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, marker, map.getCenter());
+function onSuccess(position){
+    button.innerText = "Detecting your location...";
+    let {latitude, longitude} = position.coords;
+    let lastString = [5, "e", 7, "b", 2],
+    reverseString = lastString.reverse().join(""),
+    key = concatStrings + reverseString;
+    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${key}`)
+    .then(response => response.json()).then(response =>{
+        let allDetails = response.results[0].components;
+        console.table(allDetails);
+        let {hamlet, road, county, city, country} = allDetails;
+        if(road == undefined || road == "unnamed road"){
+            road = hamlet;
+        }
+        if(city == undefined){
+            city = county;
+        }
+        button.innerText = `${road}, ${city}, ${country}`;
+        key = "";
+    }).catch(()=>{
+        button.innerText = "Something went wrong";
     });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, marker, map.getCenter());
-  }
-  function handleLocationError(browserHasGeolocation, marker, pos) {
-    marker.setPosition(pos);
-    marker.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
-    marker.open(map);
-  }
 }
 
-initMap();
-
-var pos = geoFindMe();
-
-function geoFindMe() {
-  var output = document.getElementById("out");
-  if (!navigator.geolocation){
-    output.innerHTML = "<p>Where do you want to look for options?</p>";
-    return;
-  }
-  function success(position) {
-    var lat = position.coords.latitude;
-    var lng = position.coords.longitude;
-    var pos = {lat:lat, lng:lng};
-    output.innerHTML = 'It looks like you\'re currently somewhere close to '  + pos.lat + ',' + pos.lng + '. Is this where you\'d like to look for options?';
-  }
-  function error() {
-    output.innerHTML = "Unable to retrieve your location";
-  }
-  output.innerHTML = "<p>Locating…</p>";
-  navigator.geolocation.getCurrentPosition(success, error);
-  initMap();
+function onError(error){
+    if(error.code == 1){
+        button.innerText = "You denied the request";
+    }else if(error.code == 2){
+        button.innerText = "Location is unavailable";
+    }else{
+        button.innerText = "Something went wrong";
+    }
+    button.setAttribute("disabled", "true");
 }
+<!-- \\ -->
+const disabledKeys = ["u", "I"];
+
+const showAlert = e => {
+    e.preventDefault();
+    return alert("Sorry, you can't view or copy source codes this way!");
+}
+
+document.addEventListener("contextmenu", e => {
+    showAlert(e);
+});
+
+document.addEventListener("keydown", e => {
+    if (e.ctrlKey && disabledKeys.includes(e.key) || e.key === "F12") {
+        showAlert(e);
+    }
+});
 </script>
                 
         <div class="cursor-dot-outline"></div>
