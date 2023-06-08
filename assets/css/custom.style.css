@@ -26,6 +26,7 @@
     --sk-sidebar-bg-rgb: 27, 25, 148;
     --sk-sidebar-color-rgb: 76, 114, 172;
     --bs-light-rgb: 44, 80, 117; 
+    --bs-konkon-rgb: 105, 102, 254;
 }
 body.dark {
    --light-nav: #2d2e33;
@@ -291,7 +292,7 @@ body.bg-light {
    padding-bottom: 37.5px;
 }
 .homepage-header-list {
-   transform: translate(0, -37.5px);
+   transform: translate(0, -55.5px);
 }
 /* DASHBOARD */
 
