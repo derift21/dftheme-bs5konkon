@@ -1,11 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DAFTAR MEMBER | SIPDOS</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#673AB6">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favico.png">
+    
+    <link href="../assets/src/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/studio-konkon.css" rel="stylesheet" />
+    <link href="../assets/css/studio-konkon-app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/studio-konkon-ui.css">
+    <link rel="stylesheet" href="../assets/css/studio-konkon-modals.css">
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalrg">
-            Launch demo modal
-        </button>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Selectize js -->
+    <script src="../assets/src/selectize.js/js/standalone/selectize.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/src/selectize.js/css/selectize.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/src/selectize.js/css/selectize.bootstrap4.css" />
 
-        <!-- Modal -->
-        <div class="modal right fade" id="myModalrg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <link href="../assets/fonts/Material-Design-Iconic/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../assets/css/custom.style.css">        
+</head>
+
+<div class="preloader-wrap" id="preloader-background">
+    <div id="circle-loader"></div>
+    <svg id="centre-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" width="0.833in" height="0.931in">
+        <image  x="0px" y="0px" width="90px" height="90px"  xlink:href="../assets/img/logo/logoinstansi.png" />
+    </svg>
+
+    <div class="percentage" id="precent"></div>
+    <div class="loader">
+        <div class="trackbar">
+            <div class="loadbar"></div>
+        </div>
+        <div class="glow"></div>
+    </div>
+
+    <div class="loading-text">
+        <span class="letter">P</span>
+        <span class="letter">R</span>
+        <span class="letter">E</span>
+        <span class="letter">P</span>
+        <span class="letter">A</span>
+        <span class="letter">R</span>
+        <span class="letter">I</span>
+        <span class="letter">N</span>
+        <span class="letter">G</span>
+    </div>
+</div>
+
+<body class="bg-light" style="overflow-x: hidden;">    
+            
+    <div class="be-wrapper be-offcanvas-menu be-fixed-sidebar"
+       xstyle="--sk-sidebar-bg-rgb:254, 102, 158;--sk-sidebar-color-rgb:254, 102, 158;">
+
+        <nav class="navbar navbar-expand fixed-top be-top-header">
+            <div class="container-fluid">
+
+                <div class="be-navbar-header">
+                    <!-- <a class="nav-link be-toggle-left-sidebar" href="#" id="left-sidebar-toggle">
+                        <span class="icon zmdi zmdi-menu"></span>
+                    </a> -->
+                    <button style="padding-right: 10px;" id="left-sidebar-toggle" type="button" class="be-toggle-left-sidebar hamburger hamburger--elastic">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <a class="xnavbar-brand" href="#">
+                        <div class="sidebar-header">
+                            <div class="pro-sidebar-logo">
+                                <div>
+                                    <i class="zmdi zmdi-book rotate-n-15 applogo"></i>
+                                </div>
+                            </div>
+                            <h5 style="margin: 0 10px; padding-top: 0px;">
+                                <a href="" class="flex-wrap-center sidebar-logo">
+                                    <!-- <i class="fad fa-book-user rotate-n-15 applogo"></i> -->
+                                    <div class="center"
+                                        style="width: 100%;display: flex;flex-direction: column;align-items: center;">
+                                        <h5>
+                                            <div class="desclogo">SIPD
+                                                <i class="zmdi zmdi-graduation-cap" style="font-size: 35px!important;margin-right: 2px;"></i>S
+                                            </div>
+                                        </h5>
+                                        <p>
+                                            <i class="zmdi zmdi-pin" style="padding-top: 4px;"></i>
+                                            LOK INSTANSI
+                                        </p>
+                                    </div>
+                                </a>
+                            </h5>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- <div class="page-title"><span>App Studio KonKon</span></div> -->
+
+                <div class="be-right-navbar">
+                    <ul class="nav navbar-nav menu-end be-icons-nav">
+                        <button id="theme-toggle" aria-label="Mode gelap" class="soundswtch d-none d-sm-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill-rule="evenodd"
+                                viewbox="0 0 512 512" width="1em" height="1em">
+                                <path class="ray-ring"
+                                    d="m7 256 73-73V80h103l73-73 73 73h103v103l73 73-73 73v103H329l-73 73-73-73H80V329L7 256zm249-144a144 144 0 1 1 0 288 144 144 0 0 1 0-288z">
+                                </path>
+                                <circle cx="256" cy="256" r="112"></circle>
+                            </svg>
+                        </button>
+                        <script>
+                            //                                                        
+                            // THEME TOGGLE
+                            const themeToggle = document.querySelector('#theme-toggle');
+                            let modePref = localStorage.getItem('modePref');
+
+                            themeToggle.addEventListener('click', () => {
+                                document.body.classList.contains('light') ? enableDarkMode() : enableLightMode();
+                            });
+
+                            themeToggle.addEventListener('mouseleave', () => {
+                                themeToggle.blur();
+                            });
+
+                            document.addEventListener('keydown', (e) => {
+                                if (e.key === 'Escape') {
+                                    themeToggle.blur();
+                                }
+                            });
+
+                            function enableDarkMode() {
+                                document.body.classList.remove('light');
+                                document.body.classList.add('dark');
+                                themeToggle.setAttribute('aria-label', 'Mode terang');                                
+                                $('#nav-thm-toggle').html("Tema: Gelap");
+                                localStorage.setItem('modePref', 'dark');
+                            }
+
+                            function enableLightMode() {
+                                document.body.classList.remove('dark');
+                                document.body.classList.add('light');
+                                themeToggle.setAttribute('aria-label', 'Mode gelap');
+                                $('#nav-thm-toggle').html("Tema: Terang");                                
+                                if (localStorage.getItem('modePref') === 'dark') {
+                                    localStorage.setItem('modePref', 'light');                                    
+                                }
+                            }
+
+                            function setThemePreference() {
+                                if (modePref === 'dark') {
+                                    enableDarkMode();                                    
+                                } else if (modePref === 'light') {
+                                    enableLightMode();                                    
+                                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                                    enableDarkMode();
+                                    $('#nav-thm-toggle').html("Tema: Gelap");
+                                } else {
+                                    enableLightMode();
+                                    $('#nav-thm-toggle').html("Tema: Terang");
+                                }
+                            }
+                            document.onload = setThemePreference();
+                        </script>                       
+
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle d-none d-sm-block" href="#"
+                                id="user_n_messages_bell" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                role="button" aria-expanded="false">
+                                <span class="icon zmdi zmdi-notifications"></span>
+                                <span class="indicator"></span>
+                            </a>
+                            <div class="dropdown-menu be-notifications rounded-3 overflow-hidden" role="menu">
+                                <div class="skk-nc">
+                                    <div class="skk-nh">
+                                        <div class="skk-nhi skk-nhi-close">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-close"></i>
+                                            </a>
+                                        </div>
+                                        <h2 class="skk-nht">Notifications</h2>
+                                        <div class="skk-nhi">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="skk-nb skk-nl">
+
+                                        <li class="skk-nli skk-nli-unread">
+                                            <a href="#">
+                                                <div class="skk-nli-new"></div>
+                                                <div class="skk-nli-img">
+                                                    <img src="https://via.placeholder.com/256/fe669e/fff.png"
+                                                        alt="Avatar" />
+                                                </div>
+                                                <div class="skk-nli-text">
+                                                    <div class="skk-nli-msg">
+                                                        <b>Studio KonKon</b>
+                                                        commented: "Sed do eiusmod tempor incididunt ut labore et dolore
+                                                        magna aliqua."
+                                                    </div>
+                                                    <div class="skk-nli-metadata">3 days ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="skk-nli skk-nli-unread">
+                                            <a href="#">
+                                                <div class="skk-nli-new"></div>
+                                                <div class="skk-nli-img">
+                                                    <img src="https://via.placeholder.com/256/4285f4/fff.png"
+                                                        alt="Avatar" />
+                                                </div>
+                                                <div class="skk-nli-text">
+                                                    <div class="skk-nli-msg">
+                                                        <b>Omnis Iste</b>
+                                                        commented: "Magni dolores eos qui."
+                                                    </div>
+                                                    <div class="skk-nli-metadata">5 days ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="skk-nli">
+                                            <a href="#">
+                                                <div class="skk-nli-new"></div>
+                                                <div class="skk-nli-img">
+                                                    <img src="https://via.placeholder.com/256/ff9f00/fff.png"
+                                                        alt="Avatar" />
+                                                </div>
+                                                <div class="skk-nli-text">
+                                                    <div class="skk-nli-msg">
+                                                        <b>Mario Santoria</b>
+                                                        commented: "Nostrum exercitationem ullam corporis suscipit
+                                                        laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+                                                    </div>
+                                                    <div class="skk-nli-metadata">8 days ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="skk-nli">
+                                            <a href="#">
+                                                <div class="skk-nli-new"></div>
+                                                <div class="skk-nli-img">
+                                                    <img src="https://via.placeholder.com/256/34a853/fff.png"
+                                                        alt="Avatar" />
+                                                </div>
+                                                <div class="skk-nli-text">
+                                                    <div class="skk-nli-msg">
+                                                        <b>Serena Chaku</b>
+                                                        commented: "Quis autem vel eum iure reprehenderit qui in ea
+                                                        voluptate velit esse quam nihil molestiae consequatur."
+                                                    </div>
+                                                    <div class="skk-nli-metadata">14 days ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="skk-nli">
+                                            <a href="#">
+                                                <div class="skk-nli-new"></div>
+                                                <div class="skk-nli-img">
+                                                    <img src="https://via.placeholder.com/256/6ba4ff/fff.png"
+                                                        alt="Avatar" />
+                                                </div>
+                                                <div class="skk-nli-text">
+                                                    <div class="skk-nli-msg">
+                                                        <b>Shinobu KonKon</b>
+                                                        commented: "Qui in ea voluptate velit esse ka?"
+                                                    </div>
+                                                    <div class="skk-nli-metadata">20 days ago</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav menu-end be-user-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                <img id="user_image" src="https://via.placeholder.com/256/fe669e/fff.png"
+                                    alt="Avatar" />
+                                <span class="user-name">Studio KonKon</span>
+                            </a>
+                            <div class="dropdown-menu rounded-3 overflow-hidden" role="menu">
+                                <div class="skk-nvh">
+                                    <div class="skk-nvh-img">
+                                        <img src="https://via.placeholder.com/256/fe669e/fff.png" alt="Avatar" />
+                                    </div>
+                                    <div class="skk-nvh-info">
+                                        <div class="skk-nvh-name"><span class="status Online"></span> Studio KonKon</div>
+                                        <div class="skk-nvh-email">username@example.com</div>
+                                        <!-- <a class="btn btn-rounded btn-secondary" href="#">Manage Your Account</a> -->
+                                    </div>
+                                </div>
+
+                                <ul class="skk-nvl">
+                                    <li class="skk-nvl-item">
+                                        <a href="#">
+                                            <div class="skk-nvli-icon">
+                                                <i class="zmdi zmdi-translate"></i>
+                                            </div>
+                                            <div class="skk-nvli-label">Bahasa: Indonesia</div>
+                                            <div class="skk-nvli-subtitle"></div>
+                                            <div class="skk-nvli-icon">
+                                                <i class="zmdi zmdi-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="skk-nvl-item">
+                                        <a href="#">
+                                            <div class="skk-nvli-icon">
+                                                <i class="zmdi zmdi-globe-alt"></i>
+                                            </div>
+                                            <div class="skk-nvli-label" id="detect">Lokasi: Tidak diketahui</div>
+                                            <div class="skk-nvli-subtitle"></div>
+                                            <div class="skk-nvli-icon">
+                                                <i class="zmdi zmdi-chevron-right"></i>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label" id="nav-thm-toggle" onclick="changeThm()">Tema: Gelap</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
+                                </ul>
+                                <div class="skk-nva">
+                                    <a href="#">
+                                        <div class="skk-nva-icon">
+                                            <img src="https://via.placeholder.com/256/4285f4/fff.png" alt="Avatar" />
+                                        </div>
+                                        <div class="skk-nva-account">
+                                            <div class="skk-nva-name">Studio KonKon</div>
+                                            <div class="skk-nva-email">username@example.com</div>
+                                        </div>
+                                        <div class="skk-nva-check">
+                                            <i class="zmdi zmdi-check"></i>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="skk-nv-btn">
+                                    <a class="btn btn-secondary btn-rounded" href="#" data-bs-toggle="modal" data-bs-target="#logoutConfirm"><i
+                                            class="zmdi zmdi-close-circle-o"></i> Keluar</a>
+                                </div>
+                                <!-- <div class="skk-nvf">
+                                    <a href="#">Privacy Policy</a>
+                                    <span class="seperator">•</span>
+                                    <a href="#">Terms of Service</a>
+                                </div> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="be-left-sidebar" id="left-sidebar">
+            <div class="left-sidebar-wrapper">
+                <a class="left-sidebar-toggle" href="#">Studio KonKon</a>
+                <div class="left-sidebar-spacer">
+                    <div class="left-sidebar-scroll">
+                        <div class="left-sidebar-content">
+
+                            <ul class="sidebar-elements">
+                                <!-- <li class="divider">Studio KonKon: Theme 2020</li> -->
+                                <li>
+                                    <a href="../index.html">
+                                        <i class="icon zmdi zmdi-home"></i>
+                                        <span class="text">Beranda</span>
+                                    </a>
+                                </li>
+                                <li style="color: var(--sk-sidebar-divider-color);font-weight: 500;padding: 0.5rem 1.5rem;" class="text-uppercase d-flex align-items-center justify-content-between gap-3">MASTER <i class="icon zmdi zmdi-label-alt-outline"></i><hr class="flex-fill"></li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <i class="icon zmdi zmdi-storage"></i>
+                                        <span class="text">Master Data</span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="../pages/masjabatan.html">
+                                                <span class="text">Jabatan</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="text">Jadwal</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="text">Manajemen Admin</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <i class="icon zmdi zmdi-accounts"></i>
+                                        <span class="text">Daftar Member</span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="../pages/masmember.html">
+                                                <span class="text">Manajemen Member</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/masmember-detail.html">
+                                                <span class="text">Profil Member</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <i class="icon zmdi zmdi-calendar-note"></i>
+                                        <span class="text">Cuti & Presensi</span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="pages/presensi.html">
+                                                <span class="text">Presensi</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pages/cuti.html">
+                                                <span class="text">Cuti</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="color: var(--sk-sidebar-divider-color);font-weight: 500;padding: 0.5rem 1.5rem;" class="text-uppercase d-flex align-items-center justify-content-between gap-3">Bantuan <i class="icon zmdi zmdi-label-alt-outline"></i><hr class="flex-fill"></li>                                
+                                <li>
+                                    <a href="pages/pengaturan.html">
+                                        <i class="icon zmdi zmdi-settings"></i>
+                                        <span class="text">Pengaturan</span>
+                                        <span class="badge text-bg-konkon">!</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pages/about.html">
+                                        <i class="icon zmdi zmdi-info"></i>
+                                        <span class="text">Tentang</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#logoutConfirm">
+                                        <i class="icon zmdi zmdi-close-circle-o"></i>
+                                        <span class="text">Keluar</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-widget" id="user_progress">
+                    <div class="progress-data">                        
+                        <span class="progress-value" id="load_time">1645 / 2000</span>
+                        <span class="name">LOAD TIME</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-konkon" style="width:80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="be-content flex-fill pb-4">
+            <!-- Header //-->
+            <header class="homepage-header shadow-sm"
+                style="--skk-header-color:#013676;background-image:url('../assets/img/gallery/breadcrumb-header.webp');height: 25vh;min-height: 50px;">
+                <div class="homepage-header-content w-100 h-100 d-flex align-items-center"
+                    style="--skk-header-brightness:100%;padding-bottom: 15px;">
+                    <div class="container col-sm-10 col-lg-8 col-xxl-6 py-4 text-center">
+                        <h1 class="text-white mb-2 lh-1">Daftar Member</h1>
+                        <!-- <h2 class="text-white lh-1" lang="ja">スタジオこんこん</h2> -->
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb" style="justify-content: center;">
+                                <li class="breadcrumb-item">
+                                    <a href="../index.html">
+                                        <span class="icon zmdi zmdi-card-sd"></span>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">Member</li>
+                                <li class="breadcrumb-item active text-white">Daftar Member</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </header>            
+
+            <div class="container pt-5 pb-4" style="transform: translate(0, -40.5px);padding-top: 0!important;">
+                
+                <div class="col">
+                    <div class="card card-border-color card-border-color-primary" style="border-radius: 15px;">
+                      <div class="card-header card-header-divider">
+                        <div class="tools">
+                          <span class="icon zmdi zmdi-delete"></span>
+                          <svg data-bs-toggle="modal" data-bs-target="#DF21modal" class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+                          <span class="icon zmdi zmdi-refresh-sync"></span>
+                          <!-- <span class="icon zmdi zmdi-close"></span> -->
+                        </div>
+                        <h5 class="card-title mb-0">DAFTAR MEMBER</h5>
+                        <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+                      </div>
+                      <div class="card-body" style="padding-bottom: 5px;padding-top: 15px;">
+                        <div class="head" style="margin-bottom: 10px;">
+                            <h3 style="margin-bottom:0;display: flex;align-items: center;grid-gap: 5px;"><i style="line-height: 25px;padding: 0 15px 0 8px;" class="bx zmdi zmdi-search"></i> </h3>            
+                            <div id="pattern" class="pattern">
+                                <form action="#" method="post" class="f">
+                                    <label class="is-vishidden">Pencarian</label>
+                                    <input type="text" id="srch" placeholder="Pencarian">
+                                    <i style="line-height: 15px;" class="cari zmdi zmdi-search"></i>
+                                </form>
+                            </div>
+                            <span class="link hover-round-g">
+                                <i class="fas fa-sync-alt reload" style="line-height: 15px;cursor: pointer" id="reloadTB"></i>
+                            </span>
+                        </div>
+                      </div>                      
+
+                      <style>
+                        .card-body .head {
+  display: flex;
+  align-items: center;
+  /* grid-gap: 10px; */
+}
+
+.card-body .head h3 {
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* CONTENT CARI */
+.f .is-vishidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .head .pattern {  
+    line-height: 1;
+    flex: auto;
+  }
+  .f {
+     position: relative; 
+  }
+  
+  .f input {
+    display: block;
+    border: 1px solid #0006;
+    background: var(--grey);
+    color: var(--dark);
+    border-radius: 20px;
+  }
+  
+  .f .srch {
+    width: 100%;
+    padding: 0.5em 0.5em 0.6em 0.5em;
+    padding-right: 1.5em;
+    position: relative;
+   top: 0;
+   height: 30px;
+    }
+
+  .f #srch {
+      width: 100%;
+      padding: 0.5em;
+      padding-right: 1.5em;
+      position: relative;
+     top: 0;
+     height: 30px;
+  }
+  
+  .f .cari {
+    position: absolute;
+    right: 0.75em;
+    top: 0.5em;
+    bottom: 0.5em;
+    z-index: 1;  
+    padding: 0;
+    cursor: pointer;
+  }
+                      </style>
+
+                      <div class="text-nowrap table-responsive table-dev-example">
+                        <table class="table table-striped table-hover mb-0">
+                            <thead style="background-color: var(--light-bg);color: var(--dark)!important;">
+                                <tr>
+                                    <th class="form-control-sm text-center" style="width:4%;">
+                                        <input class="form-check-input rounded-circle" type="checkbox" id="check1">
+                                        <label class="form-check-label" for="check1"></label>
+                                    </th>
+                                    <th style="width:1%;"></th>
+                                    <th style="width:20%;">User</th>
+                                    <th style="width:17%;">Domain</th>
+                                    <th style="width:15%;">Storage</th>
+                                    <th style="width:10%;">Status</th>
+                                    <th style="width:10%;">Renewal</th>
+                                    <th style="width:10%;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+        <tr>
+        <td class="form-control-sm text-center">
+            <input class="form-check-input rounded-circle" type="checkbox" id="check2">
+            <label class="form-check-label" for="check2"></label>
+        </td>
+        <td class="user-avatar">
+            <img class="rounded-circle" src="../assets/img/avatars/default-user.png" alt="Avatar">
+        </td>
+        <td class="cell-detail user-info">
+            <span>Herman Beck</span>
+            <span class="cell-detail-description">Personal Account</span>
+        </td>
+        <td class="cell-detail">
+            <span>example.com</span>
+            <span class="cell-detail-description">Owner</span>
+        </td>			  
+        <td class="milestone">
+            <span class="completed">42GB / 100GB</span>
+            <span class="label">Used</span>
+            <div class="progress progress-sm">
+                <div class="progress-bar bg-primary" style="width:42%;"></div>
+            </div>
+        </td>
+        <td class="cell-detail">
+            <span class="badge badge-success">Active</span>
+        </td>
+        <td class="cell-detail">
+            <span>May 15, 2019</span>
+            <span class="cell-detail-description">£54.99 (Incl. VAT)</span>
+        </td>
+        <td class="text-end">
+            <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <span>Manage</span>
+                    <span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="#">Edit Account</a>
+                    <a class="dropdown-item" href="#">Renew Plan</a>
+                </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td class="form-control-sm text-center">
+            <input class="form-check-input rounded-circle" type="checkbox" id="check3">
+            <label class="form-check-label" for="check3"></label>
+        </td>
+        <td class="user-avatar">
+            <img class="rounded-circle" src="../assets/img/avatars/default-user.png" alt="Avatar">
+        </td>
+        <td class="cell-detail user-info">
+            <span>Ashton Cox</span>
+            <span class="cell-detail-description">Personal Account</span>
+        </td>
+        <td class="cell-detail">
+            <span>cdn.example.com</span>
+            <span class="cell-detail-description">User</span>
+        </td>			  
+        <td class="milestone">
+            <span class="completed">0GB / 100GB</span>
+            <span class="label">Used</span>
+            <div class="progress progress-sm">
+                <div class="progress-bar bg-primary" style="width:0%;"></div>
+            </div>
+        </td>
+        <td class="cell-detail">
+            <span class="badge badge-warning">Inactive</span>
+        </td>
+        <td class="cell-detail">
+            <span>-</span>
+            <span class="cell-detail-description">£0 (Incl. VAT)</span>
+        </td>
+        <td class="text-end">
+            <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <span>Manage</span>
+                    <span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="#">Edit Account</a>
+                    <a class="dropdown-item disabled" href="#">Renew Plan</a>
+                </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td class="form-control-sm text-center">
+            <input class="form-check-input rounded-circle" type="checkbox" id="check4">
+            <label class="form-check-label" for="check4"></label>
+        </td>
+        <td class="user-avatar">
+            <img class="rounded-circle" src="../assets/img/avatars/default-user.png" alt="Avatar">
+        </td>
+        <td class="cell-detail user-info">
+            <span>Cara Stevens</span>
+            <span class="cell-detail-description">Personal Account</span>
+        </td>
+        <td class="cell-detail">
+            <span>wordpress.example.com</span>
+            <span class="cell-detail-description">User</span>
+        </td>			  
+        <td class="milestone">
+            <span class="completed">84GB / 100GB</span>
+            <span class="label">Used</span>
+            <div class="progress progress-sm">
+                <div class="progress-bar bg-danger" style="width:84%;"></div>
+            </div>
+        </td>
+        <td class="cell-detail">
+            <span class="badge badge-success">Active</span>
+        </td>
+        <td class="cell-detail">
+            <span>June 28, 2019</span>
+            <span class="cell-detail-description">£54.99 (Incl. VAT)</span>
+        </td>
+        <td class="text-end">
+            <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <span>Manage</span>
+                    <span class="icon-dropdown zmdi zmdi-chevron-down"></span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="#">Edit Account</a>
+                    <a class="dropdown-item" href="#">Renew Plan</a>
+                </div>
+            </div>
+        </td>
+        </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer card-footer-contrast text-muted center">Lorem ipsum dolor sit amet</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+        <div class="modal right fade" id="DF21modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
                 <div class="modal-content">
 
@@ -27,7 +773,7 @@
                                     <div class="profile-photo-div" id="profile-photo-div">
                                         <div class="profile-img-div" id="profile-img-div">
                                             <div id="ploader"></div>
-                                            <img id="profile-img" src="assets/img/avatars/default-user.png">
+                                            <img id="profile-img" src="../assets/img/avatars/default-user.png">
                                         </div>
                                         <div class="profile-buttons-div">
                                             <div class="profile-img-input" id="profile-img-input">
@@ -304,23 +1050,300 @@
         </div>
         <!-- modal -->
 
+                    </div>
+                  </div>
+                
+            </div>            
+        </div>        
 
-
-
-        <div class="col-lg-4">
-            <div class="card card-border-color card-border-color-primary">
-              <div class="card-header card-header-divider">
-                <div class="tools">
-                  <span class="icon zmdi zmdi-edit"></span>
-                  <span class="icon zmdi zmdi-refresh-sync"></span>
-                  <span class="icon zmdi zmdi-close"></span>
+        <div class="b-example-divider"></div>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="text-muted">© 2023 DF21</span>                    
                 </div>
-                <h5 class="card-title mb-0">Primary KonKon</h5>
-                <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
-              </div>
-              <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="mb-0">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </div>        
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-google" style="vertical-align: -.125em;
+               fill: currentColor;"></span></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-whatsapp" style="vertical-align: -.125em;
+               fill: currentColor;"></span></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><span class="icon zmdi zmdi-linkedin-box" style="vertical-align: -.125em;
+               fill: currentColor;"></span></a></li>
+                </ul>
+            </footer>
+        </div>
+        
+        <div class="modal modal-full-color modal-danger fade" id="logoutConfirm" data-bs-backdrop="static" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center align-items-center">
+                        <div class="text-center" style="width:100%;">
+                            <span class="modal-main-icon zmdi zmdi-info-outline"></span>
+                            <h3>Konfirmasi</h3>
+                            <p>Anda yakin akan keluar?</p>
+                            <div class="mt-5"> 
+                                <button class="btn btn-space btn-light" type="button" data-bs-dismiss="modal" style="min-width: 100px;">Batal</button>
+                                <button class="btn btn-space btn-secondary" type="button" data-bs-dismiss="modal" style="min-width: 100px;">Keluar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>  
+
+<!-- <button id="detect">Detect your location</button> -->
+<script>
+let arr = ["8bb0d", "f341b6", "789774", "60a28", "846541e"],
+joinArr = arr.join("").split("").reverse().join(""),
+splitString = joinArr.split("76"),
+concatStrings = splitString[0] + splitString[1];
+
+const button = document.querySelector("#detect");
+button.addEventListener("click", ()=>{
+    if(navigator.geolocation){
+        button.innerText = "Allow to detect location";
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }else{
+        button.innerText = "Your browser not support";
+    }
+});
+
+function onSuccess(position){
+    button.innerText = "Detecting your location...";
+    let {latitude, longitude} = position.coords;
+    let lastString = [5, "e", 7, "b", 2],
+    reverseString = lastString.reverse().join(""),
+    key = concatStrings + reverseString;
+    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${key}`)
+    .then(response => response.json()).then(response =>{
+        let allDetails = response.results[0].components;
+        console.table(allDetails);
+        let {hamlet, road, county, city, country} = allDetails;
+        if(road == undefined || road == "unnamed road"){
+            road = hamlet;
+        }
+        if(city == undefined){
+            city = county;
+        }
+        button.innerText = `${road}, ${city}, ${country}`;
+        key = "";
+    }).catch(()=>{
+        button.innerText = "Something went wrong";
+    });
+}
+
+function onError(error){
+    if(error.code == 1){
+        button.innerText = "You denied the request";
+    }else if(error.code == 2){
+        button.innerText = "Location is unavailable";
+    }else{
+        button.innerText = "Something went wrong";
+    }
+    button.setAttribute("disabled", "true");
+}
+<!-- \\ -->
+const disabledKeys = ["u", "I"];
+
+const showAlert = e => {
+    e.preventDefault();
+    return alert("Sorry, you can't view or copy source codes this way!");
+}
+
+document.addEventListener("contextmenu", e => {
+    showAlert(e);
+});
+
+document.addEventListener("keydown", e => {
+    if (e.ctrlKey && disabledKeys.includes(e.key) || e.key === "F12") {
+        showAlert(e);
+    }
+});
+</script>
+                
+        <div class="cursor-dot-outline"></div>
+        <div class="cursor-dot"></div>
+        
+        <script type="text/javascript" src="../assets/src/bootstrap-5.3.0/js/bootstrap.bundle.js"></script>
+        <script src="../assets/js/default.script.js" async defer></script>
+
+        <audio id="snd-switch" src="data:audio/ogg;base64,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wvM8zzQhiqJomhBFUTRNmKZpqiowTVUVAABQ4AAAEGCDpsTiAIWGrAQAQgIAHIpiWZrmeZ4niqapmiRJ0zxPFEXRNE1TVUmSpnmeKIqiaZqmqrIsTfM8URRF01RVVYWmeZ4oiqJpqqrqwvM8TxRF0TRV1XXheZ4niqJomqrquhBFUTRN01RNVXVdIIqmaZqqqqquC0RPFE1TVV3XdYHniaJpqqqrui4QTdNUVVV1XVkGmKZpqqrryjJAVVXVdV1XlgGqqqqu67qyDFBV13VdWZZlAK7rurIsywIAAA4cAAACjKCTjCqLsNGECw9AoSErAoAoAADAGKYUU8owJiGkEBrGJIQUQiYlpdJSqiCkUlIpFYRUSiolo5RSailVEFIpqZQKQiollVIAANiBAwDYgYVQaMhKACAPAIAwRinGGHNOIqQUY845JxFSijHnnJNKMeacc85JKRlzzDnnpJTOOeecc1JK5pxzzjkppXPOOeeclFJK55xzTkopJYTOQSellNI555wTAABU4AAAEGCjyOYEI0GFhqwEAFIBAAyOY1ma5nmiaJqWJGma53meKJqmJkma5nmeJ4qqyfM8TxRF0TRVled5niiKommqKtcVRdM0TVVVXbIsiqZpmqrqujBN01RV13VdmKZpqqrrui5sW1VV1XVlGbatqqrqurIMXNd1ZdmWgSy7ruzasgAA8AQHAKACG1ZHOCkaCyw0ZCUAkAEAQBiDkEIIIWUQQgohhJRSCAkAABhwAAAIMKEMFBqyEgBIBQAAjLHWWmuttdZAZ6211lprrYDMWmuttdZaa6211lprrbXWUmuttdZaa6211lprrbXWWmuttdZaa6211lprrbXWWmuttdZaa6211lprrbXWWmuttdZaay2llFJKKaWUUkoppZRSSimllFJKBQD6VTgA+D/YsDrCSdFYYKEhKwGAcAAAwBilGHMMQimlVAgx5px0VFqLsUKIMeckpNRabMVzzkEoIZXWYiyecw5CKSnFVmNRKYRSUkottliLSqGjklJKrdVYjDGppNZai63GYoxJKbTUWosxFiNsTam12GqrsRhjayottBhjjMUIX2RsLabaag3GCCNbLC3VWmswxhjdW4ultpqLMT742lIsMdZcAAB3gwMARIKNM6wknRWOBhcashIACAkAIBBSijHGGHPOOeekUow55pxzDkIIoVSK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"></audio>
+        <script>
+            const button_switch = document.querySelector("#snd-switch");
+            const play_switch_sound = () => {
+                button_switch.currentTime = 0;
+                button_switch.muted = false;
+                button_switch.play();  
+            };
+            Array.from(document.querySelectorAll(".soundswtch")).forEach((e) => {  
+                e.addEventListener("mousedown", play_switch_sound);  
+            });
+
+            $('.modal').on('shown.bs.modal', function() {                
+                $(' html').css({'overflow': 'hidden'});
+            });
+            $('.modal').on('hide.bs.modal', function() {
+                $(' html').css({'overflow': 'hidden auto'});
+            });
+
+            // CHECKING ONLINE/AWAY
+            // use jquery-idle-detect.js script below
+            $(window).on('idle:start', function(){
+            //start your prefetch etc here...
+            console.log('Idle Time Started!');
+            $('.status')
+                    .removeClass('Online')
+                    .addClass('Away');
+                    // .text('Away');
+            });
+
+            $(window).on('idle:stop', function(){
+            //stop your prefetch etc here...
+            console.log('Idle Time Stopped!');
+            $('.status')
+                    .removeClass('Away')
+                    .addClass('Online');
+                    // .text('Online');
+            });
+
+            //jquery-idle-detect.js
+            (function($,$w){
+            // expose configuration option
+            // idle is triggered when no events for 60 seconds
+            $.idleTimeout = 60000; 
+
+            // currently in idle state
+            var idle = false;
+
+            // handle to idle timer for detection
+            var idleTimer = null;
+
+            //start idle timer and bind events on load (not dom-ready)
+            $w.on('load', function(){ 
+                startIdleTimer();
+                $w.on('focus resize mousemove keyup', startIdleTimer)
+                .on('blur',idleStart); //force idle when in a different tab/window
+                
+            });
+
+            function startIdleTimer() {
+                clearTimeout(idleTimer); //clear prior timer
+
+                if (idle) $w.trigger('idle:stop'); //if idle, send stop event
+                idle = false; //not idle
+
+                var timeout = ~~$.idleTimeout; // option to integer
+                if (timeout <= 100) timeout = 100; // min 100ms
+                if (timeout > 300000) timeout = 300000; // max 5 minutes
+
+                idleTimer = setTimeout(idleStart, timeout); //new timer
+            }
+
+            function idleStart() {
+                if (!idle) $w.trigger('idle:start');
+                idle = true;
+            }
+
+            }(window.jQuery, window.jQuery(window)));
+
+            // 
+            function getBrowserSize(){
+                var w, h;
+
+                    if(typeof window.innerWidth != 'undefined')
+                    {
+                    w = window.innerWidth; //other browsers
+                    h = window.innerHeight;
+                    } 
+                    else if(typeof document.documentElement != 'undefined' && typeof      document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) 
+                    {
+                    w =  document.documentElement.clientWidth; //IE
+                    h = document.documentElement.clientHeight;
+                    }
+                    else{
+                    w = document.body.clientWidth; //IE
+                    h = document.body.clientHeight;
+                    }
+                return {'width':w, 'height': h};
+            }
+
+            // LOADER
+            var width = 100,
+            perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
+            EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+            time = parseInt((EstimatedTime/1000)%60)*100;
+
+            // Loadbar Animation
+            $(".loadbar").animate({
+            width: width + "%"
+            }, time);
+
+            // Loadbar Glow Animation
+            $(".glow").animate({
+            width: width + "%"
+            }, time);
+
+            // Percentage Increment Animation
+            var PercentageID = $("#precent"),
+                start = 0,
+                end = 100,
+                durataion = time;
+                animateValue(PercentageID, start, end, durataion);
+                
+            function animateValue(id, start, end, duration) {
+            
+            var range = end - start,
+                current = start,
+                increment = end > start? 1 : -1,
+                stepTime = Math.abs(Math.floor(duration / range)),
+                obj = $(id);
+                
+            var timer = setInterval(function() {
+                current += increment;
+                $(obj).text(current + "%");
+                //obj.innerHTML = current;
+                if (current == end) {
+                clearInterval(timer);
+                }
+            }, stepTime);
+            }
+            
+            // Fading Out Loadbar on Finised
+            setTimeout(function(){
+            $('.preloader-wrap').fadeOut(300);
+            $(' html, body').css({'overflow-x': 'hidden','overflow-y': 'auto'});
+                if(parseInt(getBrowserSize().width) > 576){
+                    mySidebar.open();
+                }
+            }, time);       
+            
+            function changeThm(){
+                document.getElementById("theme-toggle").click();
+            };
+
+            $("#theme-toggle svg").mousedown(function(){
+                $(this).addClass("pressed");
+            });
+
+            $("#theme-toggle svg").mouseup(function(){
+                $(this).removeClass("pressed");
+            });
+
+            $("#theme-toggle svg").on("tap",function(){
+                $(this).addClass("pressed");
+            });
+
+            $("#theme-toggle svg").on("tap",function(){
+                $(this).removeClass("pressed");
+            });
+
+            $("#theme-toggle svg").mouseout(function(){
+                $(this).removeClass("pressed");
+            });
+        </script>
+</body>
+</html>
