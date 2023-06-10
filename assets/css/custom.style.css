@@ -73,6 +73,17 @@ body.dark {
 body.bg-light {
    background-color: var(--light-bg) !important;
 }
+.card-header .tools svg.icon {
+      transition: transform 0.3s ease-out;
+      font-size: 2rem;
+}
+.card-header .tools .icon.zmdi-refresh-sync {
+      transition: transform 0.3s ease-out;
+}
+.card-header .tools svg.icon:hover,
+.card-header .tools .icon.zmdi-refresh-sync:hover {
+      transform: rotate(90deg);
+}
 .card-shadow {    
     transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
