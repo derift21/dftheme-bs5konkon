@@ -1,0 +1,18 @@
+{
+	"sEmptyTable":	 "<div id='zerorecords' style='color:var(--dark);font-family:-apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, &quot;Fira Sans&quot;, Avenir, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, sans-serif;height:52vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center'><div><style>body { margin: 0 }</style><h1 style='display:inline-block;border-right:1px solid rgba(0, 0, 0,.3);margin:0;margin-right:20px;padding:10px 15px 10px 0;font-size:24px;font-weight:500;vertical-align:top'>404</h1><div style='display:inline-block;text-align:left;line-height:49px;height:49px;vertical-align:middle'><h2 style='font-size:14px;font-weight:normal;line-height:inherit;margin:0;padding:0'>Tidak dapat memuat data<!-- -->.</h2></div></div></div>",
+	"sProcessing":   "<i class='fad fa-spinner-third fa-fw fa-xl margin-right-md fa-spin'></i> Sedang memproses...",
+	"sLengthMenu":   "Tampilkan _MENU_ entri",
+	"sZeroRecords":  "<div id='zerorecords' style='color:var(--dark);font-family:-apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, &quot;Fira Sans&quot;, Avenir, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, sans-serif;height:52vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center'><div><style>body { margin: 0 }</style><h1 style='display:inline-block;border-right:1px solid rgba(0, 0, 0,.3);margin:0;margin-right:20px;padding:10px 15px 10px 0;font-size:24px;font-weight:500;vertical-align:top'>404</h1><div style='display:inline-block;text-align:left;line-height:49px;height:49px;vertical-align:middle'><h2 style='font-size:14px;font-weight:normal;line-height:inherit;margin:0;padding:0'>Data tidak ditemukan<!-- -->.</h2></div></div></div>",
+	"sInfo":         "<i class='zmdi zmdi-info'></i> Menampilkan halaman _PAGE_ dari _PAGES_",
+	"sInfoEmpty":    "<i class='zmdi zmdi-info'></i> Menampilkan 0 entri",
+	"sInfoFiltered": "(disaring dari _MAX_ entri keseluruhan)",
+	"sInfoPostFix":  "",
+	"sSearch":       "Cari:",
+	"sUrl":          "",
+	"oPaginate": {
+		"sFirst":    "Pertama",
+		"sPrevious": "<i class='fs12 zmdi zmdi-caret-left-circle'></i>",
+		"sNext":     "<i class='fs12 zmdi zmdi-caret-right-circle'></i>",
+		"sLast":     "Terakhir"
+	}
+}

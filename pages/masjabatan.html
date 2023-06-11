@@ -750,283 +750,56 @@
                     <div class="card-footer card-footer-contrast text-muted center">Lorem ipsum dolor sit amet</div>
                   </div>
                 </div>
-              </div>
+              </div>              
 
-              <!-- Modal -->
-        <div class="modal right fade" id="DF21modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
+        <!-- Modal -->
+        <div class="modal right fade" id="DF21modal" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+            <div class="modal-dialog modal-dialog-slideout modal-sm" role="document">
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Custom Colored Header</h4>
+                        <h4 class="modal-title"><i class="zmdi zmdi-edit"></i> Jabatan</h4>
                         <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal"
                             aria-hidden="true"></button>
                     </div>
 
                     <div class="modal-body">
-                        <form id="regForm">
+                        <form id="formRef">
                             <div class="row">
-                                <div class="col-md-4 mrb-t20 text-center center-mb"
-                                    style="background: var(--shdw-modal);">
-                                    <label>
-                                        <b>Foto User</b>
-                                    </label>
-                                    <br>
-                                    <div class="profile-photo-div" id="profile-photo-div">
-                                        <div class="profile-img-div" id="profile-img-div">
-                                            <div id="ploader"></div>
-                                            <img id="profile-img" src="../assets/img/avatars/default-user.png">
-                                        </div>
-                                        <div class="profile-buttons-div">
-                                            <div class="profile-img-input" id="profile-img-input">
-                                                <label class="button" id="change-photo-label" for="change-photo"
-                                                    style="display: flex;justify-content: center;align-items: center;grid-gap: 5px;">
-                                                    <i class="zmdi zmdi-image"></i>Pilih foto
-                                                </label>
-                                                <input id="change-photo" name="img" type="file" style="display: none"
-                                                    accept="image/*">
-                                            </div>
-                                            <div class="profile-img-confirm" id="profile-img-confirm"
-                                                style="display: none">
-                                                <!-- <div class="button half green" id="save-img"><i class="fa fa-check" aria-hidden="true"></i></div> -->
-                                                <div style="width:100%;border-radius: 0 0 50% 50%;"
-                                                    class="button Xhalf red" id="cancel-img">
-                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                <div class="col-md-12">                    
+                                    <div class="form-group mb-3">                                    
+                                        <div class="row">
+                                            <div class="col">                                            
+                                            <label>Jabatan / Posisi <span class="text-danger">*</span></label>
+                                                <div class="cal-icon">                                                    
+                                                    <input type="text" id="jbp" name="jbp" value="" class="form-control form-dark-light">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="help-text">Ukuran foto maksimal adalah 300kb dengan format JPG dan PNG.
-                                    </p>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="row wrapper__account--top">
-                                        <div class="col-sm-12">
-                                            <ul class="tab-menu">
-                                                <li class="active">
-                                                    <a>
-                                                        <i class="fa fa-user visible-xs-inline-block pr-2"
-                                                            aria-hidden="true"></i>
-                                                        <span class="hidden-xs">IDENTITAS</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="wrapper__personal" style="padding: 1rem 0 0;">
-                                        <!-- <form id="formUbhProfil"> -->
-                                        <div class="form-group mb-3">
-                                            <label>Nama Lengkap
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="cal-icon">
-                                                <input id="nama" name="nama" class="form-control form-dark-light"
-                                                    type="text" maxlength="32">
-                                                <input id="x" name="x" class="form-control form-dark-light"
-                                                    type="hidden">
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label>Gelar Depan
-                                                        <span class="text-danger"></span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text" id="gdp"
-                                                            name="gdp" maxlength="14">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label>Gelar Belakang
-                                                        <span class="text-danger"></span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text" id="gbl"
-                                                            name="gbl" maxlength="32">
-                                                    </div>
+                                    <div class="form-group mb-3">                                    
+                                        <div class="row">
+                                            <div class="col-8">
+                                            <label>Jenis Jabatan <span class="text-danger">*</span></label>
+                                                <div class="cal-icon">                                    
+                                                    <select class="form-control form-dark-light selectize" id="jsj" name="jsj">
+                                                        <option value="" disabled="" selected="">-Pilih-</option>
+                                                        <option value="1">Pengajar</option>
+                                                        <option value="2">Tenaga Administrasi</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label>Tempat, Tanggal Lahir
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text"
-                                                            id="tempat" name="tempat">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light"
-                                                            data-toggle="datepicker" type="text" id="lahir"
-                                                            name="lahir">
-                                                        <span class="ico-1 icofont-ui-calendar" id="ico-1"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label>Jenis Kelamin
-                                                        <span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <select xplaceholder="Jenis Kelamin"
-                                                            class="form-control selectize" id="jk" name="jk">
-                                                            <option value="" disabled="" selected="">-Pilih-</option>
-                                                            <option value='Laki-laki'>Laki-laki</option>
-                                                            <option value='Perempuan'>Perempuan</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label>Status Pernikahan
-                                                        <span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <select xplaceholder="Status Pernikahan"
-                                                            class="form-control selectize" id="sp" name="sp">
-                                                            <option value="" disabled="" selected="">-Pilih-</option>
-                                                            <option value='Lajang'>Lajang</option>
-                                                            <option value='Menikah'>Menikah</option>
-                                                            <option value='Duda/Janda'>Duda/Janda</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label>Pendidikan Terakhir
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="cal-icon">
-                                                <select class="form-control form-control-inverse selectize" id="pddt"
-                                                    name="pddt">
-                                                    <option value="" disabled="" selected="">-Pilih-</option>
-                                                    <option value="3_S3">S3</option>
-                                                    <option value="2_S2">S2</option>
-                                                    <option value="1_S1">S1</option>
-                                                    <option value="0_SLTA">SLTA</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label>Nomor NIK (KTP)
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="cal-icon">
-                                                <input id="nik" name="nik" class="form-control form-dark-light"
-                                                    type="text" maxlength="18">
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label>Nomor HP
-                                                        <span class="text-danger"></span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text" id="hp"
-                                                            name="hp" maxlength="14">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label>Email
-                                                        <span class="text-danger"></span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text"
-                                                            id="email" name="email" maxlength="32">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label>Alamat
-                                                <span class="text-danger"></span>
-                                            </label>
-                                            <div class="cal-icon">
-                                                <input class="form-control form-dark-light" type="text" id="alamat"
-                                                    name="alamat">
-                                            </div>
-                                        </div>
-                                        <div class="row wrapper__account--top">
-                                            <div class="col-sm-12">
-                                                <ul class="tab-menu">
-                                                    <li class="active">
-                                                        <a>
-                                                            <i class="fa fa-user visible-xs-inline-block pr-2"
-                                                                aria-hidden="true"></i>
-                                                            <span class="hidden-xs">KEPEGAWAIAN</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="wrapper__personal" style="padding: 1rem 0;">
-                                        <div class="form-group mb-3">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label>Status Kepegawaian
-                                                        <span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <select xplaceholder="Status Kepegawaian"
-                                                            class="form-control selectize" id="skp" name="skp">
-                                                            <option value="" disabled="" selected="">-Pilih-</option>
-                                                            <option value='PNS'>PNS</option>
-                                                            <option value='CPNS'>CPNS</option>
-                                                            <option value='HONORER'>HONORER</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <!-- <div class="col"><label>Pangkat / Gol.<span class="text-danger"></span></label><div class="cal-icon"><input class="form-control form-dark-light" type="text" id="gol" name="gol" readonly></div></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label>Jabatan Struktural<span class="text-danger">*</span>
-                                            </label>
-                                            <div class="cal-icon">
-                                                <select xplaceholder="Pilih Jenis PTK" class="form-control selectize"
-                                                    id="jp" name="jp">
-                                                    <option value="" disabled="" selected="">-Pilih-</option>
-                                                    <option value='1'>Dekan</option>
-                                                    <option value='2'>Wadek</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <label>NIK
-                                                        <span class="text-danger"></span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text" id="nip"
-                                                            name="nip" maxlength="14">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <label>NIDN
-                                                        <span class="text-danger"></span>
-                                                    </label>
-                                                    <div class="cal-icon">
-                                                        <input class="form-control form-dark-light" type="text"
-                                                            id="nidn" name="nidn" maxlength="32">
-                                                    </div>
+                                            <div class="col">
+                                            <label>Urutan <span class="text-danger">*</span></label>
+                                                <div class="cal-icon">                                                                                        
+                                                    <input type="number" id="urt" name="urt" value="" class="form-control form-dark-light">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </form> 
                     </div>
 
                     <div class="modal-footer text-right" style="height: 55px;padding: 0;">
