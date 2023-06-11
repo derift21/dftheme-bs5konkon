@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/css/studio-konkon-ui.css">
     <link rel="stylesheet" href="../assets/css/studio-konkon-modals.css">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
 
     <!-- Datepicker -->
     <link rel="stylesheet" href="../assets/src/lightpick/css/datepicker.min.css">
@@ -513,18 +513,119 @@
                 <div class="col">
                     <div class="card card-border-color card-border-color-primary" style="border-radius: 15px;">
                       <div class="card-header card-header-divider">
-                        <div class="tools">
-                          <span class="icon zmdi zmdi-delete"></span>
+                        <div class="tools">                            
+                          <!-- <span class="icon zmdi zmdi-delete"></span> -->
+                          <span class="icon zmdi zmdi-search flip-icon" id="show-search-box"></span>                          
+                          <style>
+                            .add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+.my-navbar-nav > li > a {
+  border-right: 1px solid #ddd;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.my-navbar-nav:last-child{ border-right:0}
+.round-btn{
+  height: 50px;
+  width: 50px;
+  background-color:transparent;
+  border-radius: 34px;
+  text-align: center;
+  line-height: 50px;
+  color:gray;
+  float: right;
+}
+.flip-icon{
+   -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.hidden-search-box{
+  display: none;
+  position:relative;
+  top: 5px;
+  float:right;
+  background-color: rgb(52, 73, 94);
+  background-color: var(--light-bg);
+  height: 50px;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 15px;
+}
+.addon-btn{
+  width: 50px;
+  height:50px;
+  background-color: rgb(37, 51, 66);
+  border: 0 none;
+  /* margin-top: -5px; */
+  color: #ffffff;
+  border-radius: 15px;
+}
+.addon-text-box, addon-text-box:active{
+  background-color: transparent!important;
+  border: 0 none;
+  color:  #ffffff!important;
+  border-radius: 0;
+  /* border-bottom: 1px #FFF solid; */
+  font-family: Proxima Nova soft,Helvetica,sans;
+  font-weight: 600;
+  margin-left: calc(5px + 1.13em);
+  margin-right: calc(5px + 1.13em);
+ 
+}
+.traingle{
+  height:15px;
+  width: 15px;
+  background-color: transparent;
+  border-left: 15px transparent solid;
+  border-right: 15px transparent solid;
+  border-bottom: 15px var(--light-bg) solid;  
+    float: right;
+    margin-top: -10px;
+    margin-right: 55px;
+}
+                          </style>
+                          <script>
+                            $('#show-search-box').click(function(){
+  $("#hidden-search-box").toggle();
+});
+                          </script>
                           <svg data-bs-toggle="modal" data-bs-target="#DF21modal" class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
-                          <span class="icon zmdi zmdi-refresh-sync"></span>
-                          <!-- <span class="icon zmdi zmdi-close"></span> -->
+                          <span class="icon zmdi zmdi-refresh-sync"></span>                          
                         </div>
                         <h5 class="card-title mb-0">DAFTAR MEMBER</h5>
                         <h6 class="card-subtitle fw-normal">Card subtitle description</h6>
+                        <form id="hidden-search-box" class="navbar-form hidden-search-box" role="search">
+                            <div class="traingle"></div>
+                            <div class="input-group add-on" style="top: -5px;">
+                              <input class="form-control addon-text-box" placeholder="Search for dog lover gifts" name="s"  type="text">
+                              <button type="submit" class="input-group-btn addon-btn">
+                                <i class="zmdi zmdi-search flip-icon"></i>
+                              </button>
+                            </div>
+                          </form>
                       </div>
-                      <div class="card-body" style="padding-bottom: 5px;padding-top: 15px;">
-                        <div class="head" style="margin-bottom: 10px;">
-                            <h3 style="margin-bottom:0;display: flex;align-items: center;grid-gap: 5px;"><i style="line-height: 25px;padding: 0 15px 0 8px;" class="bx zmdi zmdi-filter-list"></i> </h3>            
+
+                      
+
+                      <div class="card-body" style="padding-bottom: 5px;padding-top: 0;">
+                        <!-- <div class="head" style="margin-bottom: 10px;">
+                            <h3 data-bs-toggle="dropdown" aria-expanded="true" style="margin-bottom:0;display: flex;align-items: center;grid-gap: 5px;"><i style="line-height: 25px;padding: 0 15px 0 8px;" class="bx zmdi zmdi-filter-list"></i> </h3>            
+                            <div class="dropdown-menu" role="menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(85px, 42px);" data-popper-placement="bottom-start">
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                            </div>
+                            <-- <button class="btn btn-rounded btn-warning dropdown-toggle show" type="button" data-bs-toggle="dropdown" aria-expanded="true"><span class="zmdi zmdi-chevron-down"></span><span class="visually-hidden">Toggle Dropdown</span></button> --
                             <div id="pattern" class="pattern">
                                 <form action="#" method="post" class="f">
                                     <label class="is-vishidden">Pencarian</label>
@@ -535,9 +636,9 @@
                             <span class="link hover-round-g">
                                 <i class="fas fa-sync-alt reload" style="line-height: 15px;cursor: pointer" id="reloadTB"></i>
                             </span>
-                        </div>
+                        </div> -->
 
-                        <div class="text-nowrap table-responsive table-dev-example">
+                        <div class="text-nowrap table-responsive table-dev-example" style="border-radius: 15px;">
                             <table id="tbref" class="table compact table-hover table-striped nowrap mb-0 dataTable">
                                 <thead>
                                     <tr>
