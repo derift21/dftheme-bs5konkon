@@ -580,6 +580,15 @@ html {
       border-color: var(--c-select);
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px var(--c-select) inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: var(--c-text);;    
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px var(--c-select) inset;/*your box-shadow*/
+    -webkit-text-fill-color: var(--c-text);;    
+} 
+
 .form-dark-light:focus {
       color: var(--c-text);
       border-color: var(--c-text);
