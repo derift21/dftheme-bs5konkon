@@ -580,7 +580,13 @@
                           </style>
                           <script>
                             $('#show-search-box').click(function(){
-  $("#hidden-search-box").toggle();
+//   $("#hidden-search-box").toggle();
+  $("#hidden-search-box").slideToggle(500, function()
+		{
+			// Focus on the search bar
+			// When animation is complete
+			$("#id").focus();	
+		});
 });
                           </script>
                           <svg data-bs-toggle="modal" data-bs-target="#DF21modal" class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
@@ -591,7 +597,7 @@
                         <form id="hidden-search-box" class="navbar-form hidden-search-box" role="search">
                             <div class="traingle"></div>
                             <div class="input-group add-on" style="top: -5px;">
-                              <input class="form-control addon-text-box" placeholder="Pencarian" name="s"  type="text">
+                              <input class="form-control addon-text-box" placeholder="Pencarian" name="s" id="s"  type="text">
                               <button type="submit" class="input-group-btn addon-btn">
                                 <i class="zmdi zmdi-search flip-icon"></i>
                               </button>
@@ -1026,7 +1032,7 @@ $(function() {
 
         <div class="b-example-divider"></div>
         <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
                 <div class="col-md-4 d-flex align-items-center">
                     <span class="text-muted">© 2023 DF21</span>                    
                 </div>

@@ -77,11 +77,13 @@ body.bg-light {
       transition: transform 0.3s ease-out;
       font-size: 2rem;
 }
-.card-header .tools .icon.zmdi-refresh-sync {
+.card-header .tools .icon.zmdi-refresh-sync,
+.card-header .tools .icon.zmdi-search {
       transition: transform 0.3s ease-out;
 }
 .card-header .tools svg.icon:hover,
-.card-header .tools .icon.zmdi-refresh-sync:hover {
+.card-header .tools .icon.zmdi-refresh-sync:hover,
+.card-header .tools .icon.zmdi-search:active {
       transform: rotate(90deg);
 }
 .card-shadow {    
