@@ -387,7 +387,7 @@ var cursor = {
        }
    }
 }
-cursor.init();
+// cursor.init();
 // CURSOR
 
 // PAGE TIMELOAD
@@ -417,9 +417,3 @@ var mySidebar = new Sidebar("#left-sidebar");
 // mySidebar.open();
 
 //console.log(mySidebar);
-
-$(document).ready(function() {
-   $('.selectize').selectize({
-       sortField: '',
-   });
-});
