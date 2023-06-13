@@ -562,7 +562,7 @@
   /* border-bottom: 1px #FFF solid; */
   font-family: Proxima Nova soft,Helvetica,sans;
   font-weight: 600;
-  margin-left: calc(5px + 1.13em);
+  margin-left: calc(5px + 1.13em)!important;
   margin-right: calc(5px + 1.13em);
  
 }
@@ -598,39 +598,25 @@
                             <div class="traingle"></div>
                             <div class="input-group add-on" style="top: -5px;">
                                 <style>
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
+.dropdown-filter .dropdown-menu {
     min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
     font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
-.dropdown-actions {
+.dropdown-filter .dropdown-actions {
     margin-top: 5px;
     margin-left: 10px;
 }
-.dropdown-menu .divider {
+.dropdown-filter .dropdown-menu .divider {
     height: 1px;
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5;
 }
-.dropdown-header {
+.dropdown-filter .dropdown-header {
     display: block;
     padding: 3px 20px;
     font-size: 12px;
@@ -648,6 +634,15 @@
 	 white-space: nowrap;
 	 cursor: pointer;
 }
+.dropdown-filter span.zmdi-filter-list {
+    margin: 11px 0 0 11px;
+    font-size: 20px;
+    padding: 12px;
+    margin: auto;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
  .dropdown-filter label:hover, .dropdown-filter label:focus {
 	 color: #262626;
 	 text-decoration: none;
@@ -656,14 +651,10 @@
  .dropdown-filter label input[type=checkbox], .dropdown-filter label input[type=radio] {
 	 margin-right: 0.5em;
 }
- .dropdown-actions {
-	 margin-top: 5px;
-	 margin-left: 10px;
-}
                                 </style>
  
                             <div class="dropdown-filter">
-                              <span data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="icon zmdi zmdi-filter-list cursor" style="margin: 11px 0 0 11px;"></span>
+                              <span data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="icon zmdi zmdi-filter-list cursor"></span>
                               <ul class="dropdown-menu">
                                 <li class="dropdown-actions">
                                   <button type="button" class="btn btn-success btn-xs">Set as default</button>
@@ -685,23 +676,6 @@
                                 <li>
                                   <label>
                                     <input type="checkbox">E-Bill
-                                  </label>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Group</li>
-                                <li>
-                                  <label>
-                                    <input type="checkbox">Personal
-                                  </label>
-                                </li>
-                                <li>
-                                  <label>
-                                    <input type="checkbox">Business
-                                  </label>
-                                </li>
-                                <li>
-                                  <label>
-                                    <input type="checkbox">Vacation
                                   </label>
                                 </li>
                               </ul>
@@ -784,7 +758,7 @@
                                 <div class="row">
                                     <div class="col-md-4 mrb-t20 text-center center-mb"
                                         style="background: var(--shdw-modal);">
-                                        <label>
+                                        <label style="font-style: italic;">
                                             <b>Foto User</b>
                                         </label>
                                         <br>
@@ -795,7 +769,7 @@
                                             </div>
                                             <div class="profile-buttons-div">
                                                 <div class="profile-img-input" id="profile-img-input">
-                                                    <label class="button" id="change-photo-label" for="change-photo"
+                                                    <label class="button bg-primary" id="change-photo-label" for="change-photo"
                                                         style="display: flex;justify-content: center;align-items: center;grid-gap: 5px;">
                                                         <i class="zmdi zmdi-image"></i>Pilih foto
                                                     </label>
@@ -1006,7 +980,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group mb-3">
-                                                <label>Jabatan Struktural<span class="text-danger">*</span>
+                                                <label>Jabatan Struktural<span class="text-danger"> *</span>
                                                 </label>
                                                 <div class="cal-icon">
                                                     <select xplaceholder="Pilih Jenis PTK" class="form-control selectize"

@@ -460,7 +460,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="skk-nvl-item"><a href="#"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label" id="nav-thm-toggle" onclick="changeThm()">Tema: Gelap</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
+                                    <li class="skk-nvl-item"><a href="#" onclick="changeThm()"><div class="skk-nvli-icon"><i class="zmdi zmdi-sun"></i></div><div class="skk-nvli-label" id="nav-thm-toggle">Tema: Gelap</div><div class="skk-nvli-subtitle"></div><div class="skk-nvli-icon"><i class="zmdi zmdi-chevron-right"></i></div></a></li>
                                 </ul>
                                 <div class="skk-nva">
                                     <a href="#">
@@ -1000,7 +1000,7 @@ const disabledKeys = ["u", "I"];
 
 const showAlert = e => {
     e.preventDefault();
-    return alert("Sorry, you can't view or copy source codes this way!");
+    // return alert("Sorry, you can't view or copy source codes this way!");
 }
 
 document.addEventListener("contextmenu", e => {
@@ -1032,12 +1032,12 @@ document.addEventListener("keydown", e => {
                 e.addEventListener("mousedown", play_switch_sound);  
             });
 
-            // $('.modal').on('shown.bs.modal', function() {                
-            //     $(' html').css({'overflow': 'hidden'});
-            // });
-            // $('.modal').on('hide.bs.modal', function() {
-            //     $(' html').css({'overflow': 'hidden auto'});
-            // });
+            $('.modal').on('shown.bs.modal', function() {                
+                $(' html').css({'overflow': 'hidden'});
+            });
+            $('.modal').on('hide.bs.modal', function() {
+                $(' html').css({'overflow': 'hidden auto'});
+            });
 
             // CHECKING ONLINE/AWAY
             // use jquery-idle-detect.js script below
@@ -1165,10 +1165,18 @@ document.addEventListener("keydown", e => {
             setTimeout(function(){
             $('.preloader-wrap').fadeOut(300);
             $(' html, body').css({'overflow-x': 'hidden','overflow-y': 'auto'});
+                $dot = document.querySelector('.cursor-dot');
+                $outline = document.querySelector('.cursor-dot-outline');
                 if(parseInt(getBrowserSize().width) > 576){
                     mySidebar.open();
+                    cursor.init();
                 }
-            }, time);       
+            }, time);
+
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $dot.style.opacity = 0;
+                $outline.style.opacity = 0;   
+            }       
             
             function changeThm(){
                 document.getElementById("theme-toggle").click();

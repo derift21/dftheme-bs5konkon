@@ -69,6 +69,10 @@ body.dark {
    border-radius: var(--r3x);
    background-color: var(--c-line)
 }
+
+.cursor {
+      cursor: pointer;
+}
 /* NAVHEADER */
 body.bg-light {
    background-color: var(--light-bg) !important;
@@ -130,7 +134,7 @@ body.bg-light {
 }
 .be-user-nav .skk-nv-btn {
    border-top: 1px solid var(--sk-sidebar-divider-bg);
-   border-bottom: 1px solid var(--sk-sidebar-divider-color);
+   border-bottom: 0px solid var(--sk-sidebar-divider-color);
 }
 .be-user-nav .skk-nvh-name,
 .be-user-nav .skk-nvl > .skk-nvl-item .skk-nvli-label,
@@ -484,7 +488,8 @@ html {
 
 .modal .modal-dialog-slideout .modal-header {
       height: 50px;
-      background: linear-gradient(40deg, #52f111, #007001b1) !important;
+      /* background: linear-gradient(40deg, #52f111, #007001b1) !important; */
+      background: linear-gradient(40deg, #4285f4, #001370b1) !important;
       color: azure;
       border-bottom: 1px solid var(--green);
       padding: 0.8rem;
@@ -763,11 +768,11 @@ input:-webkit-autofill:focus {
       display: block;
       font-family: helvetica, sans-serif;
       font-size: 15px;
-      padding: 15px;
+      padding: 10px;
       text-align: center;
       color: white;
       /* background-color: #00cccf; */
-      background-color: #4ec231;
+      /* background-color: #4ec231; */
       cursor: pointer;
       -webkit-transition: 0.5s;
       -o-transition: 0.5s;
